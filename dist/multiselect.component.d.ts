@@ -9,12 +9,15 @@ export declare class AngularMultiSelect implements OnInit, ControlValueAccessor,
     private cdr;
     data: Array<any>;
     settings: DropdownSettings;
+    isRearrangeable: boolean;
     onSelect: EventEmitter<any>;
     onDeSelect: EventEmitter<any>;
     onSelectAll: EventEmitter<Array<any>>;
     onDeSelectAll: EventEmitter<Array<any>>;
     onOpen: EventEmitter<any>;
     onClose: EventEmitter<any>;
+    onMoveItemUp: EventEmitter<any>;
+    onMoveItemDown: EventEmitter<any>;
     itemTempl: Item;
     badgeTempl: Badge;
     searchTempl: Search;
@@ -48,6 +51,9 @@ export declare class AngularMultiSelect implements OnInit, ControlValueAccessor,
     ngAfterViewInit(): void;
     ngAfterViewChecked(): void;
     onItemClick(item: any, index: number, evt: Event): boolean;
+    onMoveUp(item: any, index: number, evt: Event): void;
+    onMoveDown(item: any, index: number, evt: Event): void;
+    rearrangeItems(data: any, fromIndex: number, toIndex: number): void;
     validate(c: FormControl): any;
     private onTouchedCallback;
     private onChangeCallback;
@@ -56,8 +62,8 @@ export declare class AngularMultiSelect implements OnInit, ControlValueAccessor,
     registerOnTouched(fn: any): void;
     trackByFn(index: number, item: any): any;
     isSelected(clickedItem: any): boolean;
-    addSelected(item: any): void;
-    removeSelected(clickedItem: any): void;
+    addSelected(item: any, index: number): void;
+    removeSelected(clickedItem: any, index: number): void;
     toggleDropdown(evt: any): boolean;
     closeDropdown(): void;
     toggleSelectAll(): void;
