@@ -34,8 +34,11 @@ export class AngularMultiSelect implements OnInit, ControlValueAccessor, OnChang
     @Input()
     data: Array<any>;
 
+    // @Input()
+    // settings: DropdownSettings;
+
     @Input()
-    settings: DropdownSettings;
+    settings: any;
 
     @Input()
     isRearrangeable = false;
