@@ -202,22 +202,21 @@ export class AngularMultiSelect implements OnInit, ControlValueAccessor, OnChang
         }
     }
     onMoveUp(item: any, index: number, evt: Event) {
-        evt.preventDefault();
+        evt.stopPropagation();
         this.rearrangeItems(this.data, index, index - 1);
         this.onMoveItemUp.emit(item);
     }
     onMoveDown(item: any, index: number, evt: Event) {
-        evt.preventDefault();
+        evt.stopPropagation();
         this.rearrangeItems(this.data, index, index + 1);
         this.onMoveItemDown.emit(item);
     }
     rearrangeItems(data: any, fromIndex: number, toIndex: number) {
+        this.isActive = true;
         const element = data[fromIndex];
         data.splice(fromIndex, 1);
         data.splice(toIndex, 0, element);
-
-        this.data = data;
-        // return data;
+        this.data = [].concat(data);
     }
 
     public validate(c: FormControl): any {
@@ -290,7 +289,9 @@ export class AngularMultiSelect implements OnInit, ControlValueAccessor, OnChang
         else {
             this.selectedItems.push(item);
         }
-        this.rearrangeItems(this.data, index, 0);
+        if (this.isRearrangeable) {
+            this.rearrangeItems(this.data, index, 0);
+        }
         this.onChangeCallback(this.selectedItems);
         this.onTouchedCallback(this.selectedItems);
     }
@@ -300,7 +301,9 @@ export class AngularMultiSelect implements OnInit, ControlValueAccessor, OnChang
                 this.selectedItems.splice(this.selectedItems.indexOf(item), 1);
             }
         });
-        this.rearrangeItems(this.data, index, this.data.length - 1);
+        if (this.isRearrangeable) {
+            this.rearrangeItems(this.data, index, this.data.length - 1);
+        }
         this.onChangeCallback(this.selectedItems);
         this.onTouchedCallback(this.selectedItems);
     }

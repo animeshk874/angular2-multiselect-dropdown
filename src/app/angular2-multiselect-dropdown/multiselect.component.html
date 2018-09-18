@@ -119,7 +119,7 @@
                         <div class="clearfix">
                             <div class="pull-left" (click)="onItemClick(item,i,$event)">
                                 <input *ngIf="settings.showCheckbox" type="checkbox" [checked]="isSelected(item)" [disabled]="settings.limitSelection == selectedItems?.length && !isSelected(item)" />
-                                <label>1{{item[settings.labelKey]}}</label>
+                                <label>{{item[settings.labelKey]}}</label>
                             </div>
                             <div class="pull-right" *ngIf="isSelected(item) && isRearrangeable">
                                 <!-- class="fa fa-chevron-up" -->
