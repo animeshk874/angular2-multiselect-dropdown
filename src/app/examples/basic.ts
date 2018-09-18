@@ -49,6 +49,12 @@ export class BasicExample implements OnInit {
     onDeSelectAll(items: any) {
         console.log(items);
     }
+    onMoveUp(items: any) {
+        console.log('onMoveUp', items);
+    }
+    onMoveDown(items: any) {
+        console.log('onMoveDown', items);
+    }
     cssgist: boolean = false;
     title: string = "Basic example";
     tsgist: string = "CuppaLabs/ee72fbc7b21dad7e4e7664c5b1553235";

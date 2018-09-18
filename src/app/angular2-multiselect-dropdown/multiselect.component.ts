@@ -37,6 +37,9 @@ export class AngularMultiSelect implements OnInit, ControlValueAccessor, OnChang
     @Input()
     settings: DropdownSettings;
 
+    @Input()
+    isRearrangeable = false;
+
     @Output('onSelect')
     onSelect: EventEmitter<any> = new EventEmitter<any>();
 
@@ -54,6 +57,12 @@ export class AngularMultiSelect implements OnInit, ControlValueAccessor, OnChang
 
     @Output('onClose')
     onClose: EventEmitter<any> = new EventEmitter<any>();
+
+    @Output('onMoveItemUp')
+    onMoveItemUp: EventEmitter<any> = new EventEmitter<any>();
+
+    @Output('onMoveItemDown')
+    onMoveItemDown: EventEmitter<any> = new EventEmitter<any>();
 
     @ContentChild(Item) itemTempl: Item;
     @ContentChild(Badge) badgeTempl: Badge;
@@ -90,7 +99,7 @@ export class AngularMultiSelect implements OnInit, ControlValueAccessor, OnChang
         selectAllText: 'Select All',
         unSelectAllText: 'UnSelect All',
         enableSearchFilter: false,
-        searchBy:[],
+        searchBy: [],
         maxHeight: 300,
         badgeShowLimit: 999999999999,
         classes: '',
@@ -171,18 +180,18 @@ export class AngularMultiSelect implements OnInit, ControlValueAccessor, OnChang
         if (!found) {
             if (this.settings.limitSelection) {
                 if (limit) {
-                    this.addSelected(item);
+                    this.addSelected(item, index);
                     this.onSelect.emit(item);
                 }
             }
             else {
-                this.addSelected(item);
+                this.addSelected(item, index);
                 this.onSelect.emit(item);
             }
 
         }
         else {
-            this.removeSelected(item);
+            this.removeSelected(item, index);
             this.onDeSelect.emit(item);
         }
         if (this.isSelectAll || this.data.length > this.selectedItems.length) {
@@ -192,6 +201,25 @@ export class AngularMultiSelect implements OnInit, ControlValueAccessor, OnChang
             this.isSelectAll = true;
         }
     }
+    onMoveUp(item: any, index: number, evt: Event) {
+        evt.preventDefault();
+        this.rearrangeItems(this.data, index, index - 1);
+        this.onMoveItemUp.emit(item);
+    }
+    onMoveDown(item: any, index: number, evt: Event) {
+        evt.preventDefault();
+        this.rearrangeItems(this.data, index, index + 1);
+        this.onMoveItemDown.emit(item);
+    }
+    rearrangeItems(data: any, fromIndex: number, toIndex: number) {
+        const element = data[fromIndex];
+        data.splice(fromIndex, 1);
+        data.splice(toIndex, 0, element);
+
+        this.data = data;
+        // return data;
+    }
+
     public validate(c: FormControl): any {
         return null;
     }
@@ -253,23 +281,26 @@ export class AngularMultiSelect implements OnInit, ControlValueAccessor, OnChang
         });
         return found;
     }
-    addSelected(item: any) {
+    addSelected(item: any, index: number) {
         if (this.settings.singleSelection) {
             this.selectedItems = [];
             this.selectedItems.push(item);
             this.closeDropdown();
         }
-        else
+        else {
             this.selectedItems.push(item);
+        }
+        this.rearrangeItems(this.data, index, 0);
         this.onChangeCallback(this.selectedItems);
         this.onTouchedCallback(this.selectedItems);
     }
-    removeSelected(clickedItem: any) {
+    removeSelected(clickedItem: any, index: number) {
         this.selectedItems && this.selectedItems.forEach(item => {
             if (clickedItem[this.settings.primaryKey] === item[this.settings.primaryKey]) {
                 this.selectedItems.splice(this.selectedItems.indexOf(item), 1);
             }
         });
+        this.rearrangeItems(this.data, index, this.data.length - 1);
         this.onChangeCallback(this.selectedItems);
         this.onTouchedCallback(this.selectedItems);
     }

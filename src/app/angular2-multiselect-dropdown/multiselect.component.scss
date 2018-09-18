@@ -23,6 +23,9 @@ $label-color: #000;
 .c-btn.disabled{
     background: $btn-disabled;
 }
+.disabled {
+  color: $btn-disabled;
+}
 .c-btn:focus{
         outline: none;
     }
@@ -33,9 +36,9 @@ $label-color: #000;
         margin: 0px;
         width: calc(100% - 20px);
         .c-token{
-            list-style: none;  
+            list-style: none;
             padding: 2px 8px;
-            background: $base-color; 
+            background: $base-color;
             color: $token-color;
             border-radius: 2px;
             margin-right: 4px;
@@ -137,8 +140,8 @@ $label-color: #000;
     }
 }
 .arrow-up, .arrow-down {
-  width: 0; 
-  height: 0; 
+  width: 0;
+  height: 0;
   border-left: 13px solid transparent;
   border-right: 13px solid transparent;
   border-bottom: 15px solid #fff;
