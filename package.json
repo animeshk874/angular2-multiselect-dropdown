@@ -31,6 +31,8 @@
     "lint": "npm run tslint 'src/**/*.ts'",
     "ngcompile": "node_modules/.bin/ngc -p tsconfig-aot.json",
     "postversion": "git push && git push --tags",
+    "prebuild": "rimraf dist tmp",
+    "prebuild:watch": "rimraf dist tmp",
     "prepublishOnly": "npm run ci",
     "preversion": "npm run ci",
     "test": "karma start",
