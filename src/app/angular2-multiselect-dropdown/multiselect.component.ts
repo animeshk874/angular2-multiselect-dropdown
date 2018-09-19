@@ -210,21 +210,19 @@ export class AngularMultiSelect implements OnInit, ControlValueAccessor, OnChang
     onMoveUp(item: any, index: number, evt: Event) {
         evt.stopPropagation();
         this.rearrangeItems(this.data, index, index - 1);
-        item.index = index;
-        this.onMoveItemUp.emit(item);
+        this.onMoveItemUp.emit(this.data);
     }
     onMoveDown(item: any, index: number, evt: Event) {
         evt.stopPropagation();
         this.rearrangeItems(this.data, index, index + 1);
-        item.index = index;
-        this.onMoveItemDown.emit(item);
+        this.onMoveItemDown.emit(this.data);
     }
     rearrangeItems(data: any, fromIndex: number, toIndex: number) {
         this.isActive = true;
         const element = data[fromIndex];
         data.splice(fromIndex, 1);
         data.splice(toIndex, 0, element);
-        this.data = [].concat(data);
+        this.data = data;
     }
 
     public validate(c: FormControl): any {

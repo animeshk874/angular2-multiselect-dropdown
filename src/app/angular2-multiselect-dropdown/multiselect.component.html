@@ -124,8 +124,8 @@
                             <div class="pull-right" *ngIf="isSelected(item) && isRearrangeable">
                                 <span class="disabled fa fa-chevron-up" *ngIf="i === 0"></span>
                                 <span *ngIf="i > 0" class="fa fa-chevron-up" (click)="onMoveUp(item, i, $event)"></span>
-                                <span class="disabled" *ngIf="i === data.length - 1 || (i !== (data.length - 1)) && !isSelected(data[i + 1])"></span>
-                                <span *ngIf="(i !== (data.length - 1)) && isSelected(data[i + 1])" (click)="onMoveDown(item, i, $event)"></span>
+                                <span class="disabled fa fa-chevron-down" *ngIf="i === data.length - 1 || (i !== (data.length - 1)) && !isSelected(data[i + 1])"></span>
+                                <span class="fa fa-chevron-down" *ngIf="(i !== (data.length - 1)) && isSelected(data[i + 1])" (click)="onMoveDown(item, i, $event)"></span>
                             </div>
                         </div>
                     </li>
@@ -141,8 +141,9 @@
                                 <div class="pull-right" *ngIf="isSelected(item) && isRearrangeable">
                                     <span class="disabled fa fa-chevron-up" *ngIf="i === 0"></span>
                                     <span *ngIf="i > 0" class="fa fa-chevron-up" (click)="onMoveUp(item, i, $event)"></span>
-                                    <span class="disabled fa fa-chevron-up" *ngIf="(i !== (data.length - 1)) && !isSelected(data[i + 1])"></span>
-                                    <span class="fa fa-chevron-up" *ngIf="(i !== (data.length - 1)) && isSelected(data[i + 1])" (click)="onMoveDown(item, i, $event)"></span>
+
+                                    <span class="disabled fa fa-chevron-down" *ngIf="(i !== (data.length - 1)) && !isSelected(data[i + 1])"></span>
+                                    <span class="fa fa-chevron-down" *ngIf="(i !== (data.length - 1)) && isSelected(data[i + 1])" (click)="onMoveDown(item, i, $event)"></span>
                                 </div>
                             </div>
                         </li>
@@ -171,8 +172,8 @@
                                 <div class="pull-right" *ngIf="isSelected(item) && isRearrangeable">
                                     <span class="disabled fa fa-chevron-up" *ngIf="i === 0"></span>
                                     <span *ngIf="i > 0" class="fa fa-chevron-up" (click)="onMoveUp(item, i, $event)"></span>
-                                    <span class="disabled fa fa-chevron-up" *ngIf="(i !== (data.length - 1)) && !isSelected(data[i + 1])"></span>
-                                    <span class="fa fa-chevron-up" *ngIf="(i !== (data.length - 1)) && isSelected(data[i + 1])" (click)="onMoveDown(item, i, $event)"></span>
+                                    <span class="disabled fa fa-chevron-down" *ngIf="(i !== (data.length - 1)) && !isSelected(data[i + 1])"></span>
+                                    <span class="fa fa-chevron-down" *ngIf="(i !== (data.length - 1)) && isSelected(data[i + 1])" (click)="onMoveDown(item, i, $event)"></span>
                                 </div>
                             </div>
 
