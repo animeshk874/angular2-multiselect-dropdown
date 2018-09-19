@@ -184,17 +184,20 @@ export class AngularMultiSelect implements OnInit, ControlValueAccessor, OnChang
             if (this.settings.limitSelection) {
                 if (limit) {
                     this.addSelected(item, index);
+                    item.index = index;
                     this.onSelect.emit(item);
                 }
             }
             else {
                 this.addSelected(item, index);
+                item.index = index;
                 this.onSelect.emit(item);
             }
 
         }
         else {
             this.removeSelected(item, index);
+            item.index = index;
             this.onDeSelect.emit(item);
         }
         if (this.isSelectAll || this.data.length > this.selectedItems.length) {
@@ -207,11 +210,13 @@ export class AngularMultiSelect implements OnInit, ControlValueAccessor, OnChang
     onMoveUp(item: any, index: number, evt: Event) {
         evt.stopPropagation();
         this.rearrangeItems(this.data, index, index - 1);
+        item.index = index;
         this.onMoveItemUp.emit(item);
     }
     onMoveDown(item: any, index: number, evt: Event) {
         evt.stopPropagation();
         this.rearrangeItems(this.data, index, index + 1);
+        item.index = index;
         this.onMoveItemDown.emit(item);
     }
     rearrangeItems(data: any, fromIndex: number, toIndex: number) {

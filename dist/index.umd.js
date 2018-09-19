@@ -330,16 +330,19 @@ var AngularMultiSelect = /** @class */ (function () {
             if (this.settings.limitSelection) {
                 if (limit) {
                     this.addSelected(item, index);
+                    item.index = index;
                     this.onSelect.emit(item);
                 }
             }
             else {
                 this.addSelected(item, index);
+                item.index = index;
                 this.onSelect.emit(item);
             }
         }
         else {
             this.removeSelected(item, index);
+            item.index = index;
             this.onDeSelect.emit(item);
         }
         if (this.isSelectAll || this.data.length > this.selectedItems.length) {
@@ -352,11 +355,13 @@ var AngularMultiSelect = /** @class */ (function () {
     AngularMultiSelect.prototype.onMoveUp = function (item, index, evt) {
         evt.stopPropagation();
         this.rearrangeItems(this.data, index, index - 1);
+        item.index = index;
         this.onMoveItemUp.emit(item);
     };
     AngularMultiSelect.prototype.onMoveDown = function (item, index, evt) {
         evt.stopPropagation();
         this.rearrangeItems(this.data, index, index + 1);
+        item.index = index;
         this.onMoveItemDown.emit(item);
     };
     AngularMultiSelect.prototype.rearrangeItems = function (data, fromIndex, toIndex) {
