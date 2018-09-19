@@ -15,7 +15,7 @@
     "pretty": true,
     "stripInternal": true,
     "skipLibCheck": true,
-    "outDir": "dist",
+    "outDir": "./",
     "rootDir": "./tmp/src-inlined"
   },
   "files": [
@@ -23,7 +23,7 @@
     "./tmp/src-inlined/angular2-multiselect-dropdown.ts"
   ],
   "angularCompilerOptions": {
-    "genDir": "dist",
+    "genDir": "./",
     "debug": false,
     "skipTemplateCodegen": true,
     "skipMetadataEmit": false,
