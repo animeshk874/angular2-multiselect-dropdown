@@ -122,12 +122,10 @@
                                 <label>{{item[settings.labelKey]}}</label>
                             </div>
                             <div class="pull-right" *ngIf="isSelected(item) && isRearrangeable">
-                                <!-- class="fa fa-chevron-up" -->
-                                <span class="disabled" *ngIf="i === 0">UD</span>
-                                <span *ngIf="i > 0" (click)="onMoveUp(item, i, $event)">U</span>
-                                <!-- class="fa fa-chevron-down" -->
-                                <span class="disabled" *ngIf="i === data.length - 1 || (i !== (data.length - 1)) && !isSelected(data[i + 1])">DD</span>
-                                <span *ngIf="(i !== (data.length - 1)) && isSelected(data[i + 1])" (click)="onMoveDown(item, i, $event)">D</span>
+                                <span class="disabled fa fa-chevron-up" *ngIf="i === 0"></span>
+                                <span *ngIf="i > 0" class="fa fa-chevron-up" (click)="onMoveUp(item, i, $event)"></span>
+                                <span class="disabled" *ngIf="i === data.length - 1 || (i !== (data.length - 1)) && !isSelected(data[i + 1])"></span>
+                                <span *ngIf="(i !== (data.length - 1)) && isSelected(data[i + 1])" (click)="onMoveDown(item, i, $event)"></span>
                             </div>
                         </div>
                     </li>
@@ -141,12 +139,10 @@
                                     <label>{{item[settings.labelKey]}}</label>
                                 </div>
                                 <div class="pull-right" *ngIf="isSelected(item) && isRearrangeable">
-                                    <!-- class="fa fa-chevron-up" -->
-                                    <span class="disabled" *ngIf="i === 0">UD</span>
-                                    <span *ngIf="i > 0" (click)="onMoveUp(item, i, $event)">U</span>
-                                    <!-- class="fa fa-chevron-down" -->
-                                    <span class="disabled" *ngIf="(i !== (data.length - 1)) && !isSelected(data[i + 1])">DD</span>
-                                    <span *ngIf="(i !== (data.length - 1)) && isSelected(data[i + 1])" (click)="onMoveDown(item, i, $event)">D</span>
+                                    <span class="disabled fa fa-chevron-up" *ngIf="i === 0"></span>
+                                    <span *ngIf="i > 0" class="fa fa-chevron-up" (click)="onMoveUp(item, i, $event)"></span>
+                                    <span class="disabled fa fa-chevron-up" *ngIf="(i !== (data.length - 1)) && !isSelected(data[i + 1])"></span>
+                                    <span class="fa fa-chevron-up" *ngIf="(i !== (data.length - 1)) && isSelected(data[i + 1])" (click)="onMoveDown(item, i, $event)"></span>
                                 </div>
                             </div>
                         </li>
@@ -173,12 +169,10 @@
                                     <label>{{item[settings.labelKey]}}</label>
                                 </div>
                                 <div class="pull-right" *ngIf="isSelected(item) && isRearrangeable">
-                                    <!-- class="fa fa-chevron-up" -->
-                                    <span class="disabled" *ngIf="i === 0">UD</span>
-                                    <span *ngIf="i > 0" (click)="onMoveUp(item, i, $event)">U</span>
-                                    <!-- class="fa fa-chevron-down" -->
-                                    <span class="disabled" *ngIf="(i !== (data.length - 1)) && !isSelected(data[i + 1])">DD</span>
-                                    <span *ngIf="(i !== (data.length - 1)) && isSelected(data[i + 1])" (click)="onMoveDown(item, i, $event)">D</span>
+                                    <span class="disabled fa fa-chevron-up" *ngIf="i === 0"></span>
+                                    <span *ngIf="i > 0" class="fa fa-chevron-up" (click)="onMoveUp(item, i, $event)"></span>
+                                    <span class="disabled fa fa-chevron-up" *ngIf="(i !== (data.length - 1)) && !isSelected(data[i + 1])"></span>
+                                    <span class="fa fa-chevron-up" *ngIf="(i !== (data.length - 1)) && isSelected(data[i + 1])" (click)="onMoveDown(item, i, $event)"></span>
                                 </div>
                             </div>
 
