@@ -148,12 +148,10 @@ const noop = () => {
                                       <label>{{item[settings.labelKey]}}</label>
                                   </div>
                                   <div class="pull-right" *ngIf="isSelected(item) && isRearrangeable">
-                                      <!-- class="fa fa-chevron-up" -->
-                                      <span class="disabled" *ngIf="i === 0">UD</span>
-                                      <span *ngIf="i > 0" (click)="onMoveUp(item, i, $event)">U</span>
-                                      <!-- class="fa fa-chevron-down" -->
-                                      <span class="disabled" *ngIf="i === data.length - 1 || (i !== (data.length - 1)) && !isSelected(data[i + 1])">DD</span>
-                                      <span *ngIf="(i !== (data.length - 1)) && isSelected(data[i + 1])" (click)="onMoveDown(item, i, $event)">D</span>
+                                      <span class="disabled fa fa-chevron-up" *ngIf="i === 0"></span>
+                                      <span *ngIf="i > 0" class="fa fa-chevron-up" (click)="onMoveUp(item, i, $event)"></span>
+                                      <span class="disabled fa fa-chevron-down" *ngIf="i === data.length - 1 || (i !== (data.length - 1)) && !isSelected(data[i + 1])"></span>
+                                      <span class="fa fa-chevron-down" *ngIf="(i !== (data.length - 1)) && isSelected(data[i + 1])" (click)="onMoveDown(item, i, $event)"></span>
                                   </div>
                               </div>
                           </li>
@@ -167,12 +165,11 @@ const noop = () => {
                                           <label>{{item[settings.labelKey]}}</label>
                                       </div>
                                       <div class="pull-right" *ngIf="isSelected(item) && isRearrangeable">
-                                          <!-- class="fa fa-chevron-up" -->
-                                          <span class="disabled" *ngIf="i === 0">UD</span>
-                                          <span *ngIf="i > 0" (click)="onMoveUp(item, i, $event)">U</span>
-                                          <!-- class="fa fa-chevron-down" -->
-                                          <span class="disabled" *ngIf="(i !== (data.length - 1)) && !isSelected(data[i + 1])">DD</span>
-                                          <span *ngIf="(i !== (data.length - 1)) && isSelected(data[i + 1])" (click)="onMoveDown(item, i, $event)">D</span>
+                                          <span class="disabled fa fa-chevron-up" *ngIf="i === 0"></span>
+                                          <span *ngIf="i > 0" class="fa fa-chevron-up" (click)="onMoveUp(item, i, $event)"></span>
+
+                                          <span class="disabled fa fa-chevron-down" *ngIf="(i !== (data.length - 1)) && !isSelected(data[i + 1])"></span>
+                                          <span class="fa fa-chevron-down" *ngIf="(i !== (data.length - 1)) && isSelected(data[i + 1])" (click)="onMoveDown(item, i, $event)"></span>
                                       </div>
                                   </div>
                               </li>
@@ -199,12 +196,10 @@ const noop = () => {
                                           <label>{{item[settings.labelKey]}}</label>
                                       </div>
                                       <div class="pull-right" *ngIf="isSelected(item) && isRearrangeable">
-                                          <!-- class="fa fa-chevron-up" -->
-                                          <span class="disabled" *ngIf="i === 0">UD</span>
-                                          <span *ngIf="i > 0" (click)="onMoveUp(item, i, $event)">U</span>
-                                          <!-- class="fa fa-chevron-down" -->
-                                          <span class="disabled" *ngIf="(i !== (data.length - 1)) && !isSelected(data[i + 1])">DD</span>
-                                          <span *ngIf="(i !== (data.length - 1)) && isSelected(data[i + 1])" (click)="onMoveDown(item, i, $event)">D</span>
+                                          <span class="disabled fa fa-chevron-up" *ngIf="i === 0"></span>
+                                          <span *ngIf="i > 0" class="fa fa-chevron-up" (click)="onMoveUp(item, i, $event)"></span>
+                                          <span class="disabled fa fa-chevron-down" *ngIf="(i !== (data.length - 1)) && !isSelected(data[i + 1])"></span>
+                                          <span class="fa fa-chevron-down" *ngIf="(i !== (data.length - 1)) && isSelected(data[i + 1])" (click)="onMoveDown(item, i, $event)"></span>
                                       </div>
                                   </div>
 
@@ -405,21 +400,19 @@ export class AngularMultiSelect implements OnInit, ControlValueAccessor, OnChang
     onMoveUp(item: any, index: number, evt: Event) {
         evt.stopPropagation();
         this.rearrangeItems(this.data, index, index - 1);
-        item.index = index;
-        this.onMoveItemUp.emit(item);
+        this.onMoveItemUp.emit(this.data);
     }
     onMoveDown(item: any, index: number, evt: Event) {
         evt.stopPropagation();
         this.rearrangeItems(this.data, index, index + 1);
-        item.index = index;
-        this.onMoveItemDown.emit(item);
+        this.onMoveItemDown.emit(this.data);
     }
     rearrangeItems(data: any, fromIndex: number, toIndex: number) {
         this.isActive = true;
         const element = data[fromIndex];
         data.splice(fromIndex, 1);
         data.splice(toIndex, 0, element);
-        this.data = [].concat(data);
+        this.data = data;
     }
 
     public validate(c: FormControl): any {
