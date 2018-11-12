@@ -54,6 +54,7 @@ export declare class AngularMultiSelect implements OnInit, ControlValueAccessor,
     onMoveUp(item: any, index: number, evt: Event): void;
     onMoveDown(item: any, index: number, evt: Event): void;
     rearrangeItems(data: any, fromIndex: number, toIndex: number): void;
+    rearrangeSelectedItems(data: any, fromIndex: number, toIndex: number): void;
     validate(c: FormControl): any;
     private onTouchedCallback;
     private onChangeCallback;

@@ -146,11 +146,13 @@ var AngularMultiSelect = /** @class */ (function () {
     };
     AngularMultiSelect.prototype.onMoveUp = function (item, index, evt) {
         evt.stopPropagation();
+        this.rearrangeSelectedItems(this.selectedItems, index, index - 1);
         this.rearrangeItems(this.data, index, index - 1);
         this.onMoveItemUp.emit(this.data);
     };
     AngularMultiSelect.prototype.onMoveDown = function (item, index, evt) {
         evt.stopPropagation();
+        this.rearrangeSelectedItems(this.selectedItems, index, index + 1);
         this.rearrangeItems(this.data, index, index + 1);
         this.onMoveItemDown.emit(this.data);
     };
@@ -160,6 +162,13 @@ var AngularMultiSelect = /** @class */ (function () {
         data.splice(fromIndex, 1);
         data.splice(toIndex, 0, element);
         this.data = data;
+    };
+    AngularMultiSelect.prototype.rearrangeSelectedItems = function (data, fromIndex, toIndex) {
+        this.isActive = true;
+        var element = data[fromIndex];
+        data.splice(fromIndex, 1);
+        data.splice(toIndex, 0, element);
+        this.selectedItems = data;
     };
     AngularMultiSelect.prototype.validate = function (c) {
         return null;
