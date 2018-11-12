@@ -220,11 +220,21 @@ var AngularMultiSelect = /** @class */ (function () {
     AngularMultiSelect.prototype.addSelected = function (item, index) {
         if (this.settings.singleSelection) {
             this.selectedItems = [];
-            this.selectedItems.push(item);
+            if (this.isRearrangeable) {
+                this.selectedItems.unshift(item);
+            }
+            else {
+                this.selectedItems.push(item);
+            }
             this.closeDropdown();
         }
         else {
-            this.selectedItems.push(item);
+            if (this.isRearrangeable) {
+                this.selectedItems.unshift(item);
+            }
+            else {
+                this.selectedItems.push(item);
+            }
         }
         if (this.isRearrangeable) {
             this.rearrangeItems(this.data, index, 0);
