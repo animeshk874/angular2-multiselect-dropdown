@@ -1,4 +1,4 @@
-<div class="cuppa-dropdown" (clickOutside)="closeDropdown()">
+<div class="cuppa-dropdown" [ngClass]="{'single-selection-dd': settings.singleSelection}" (clickOutside)="closeDropdown()">
     <div class="selected-list" #selectedList>
         <div class="c-btn" (click)="toggleDropdown($event)" [ngClass]="{'disabled': settings.disabled}">
             <span *ngIf="selectedItems?.length == 0">{{settings.text}}</span>
@@ -118,7 +118,8 @@
                     <li *ngFor="let item of data | listFilter:filter : settings.searchBy; let i = index;" class="pure-checkbox">
                         <div class="clearfix">
                             <div class="pull-left" (click)="onItemClick(item,i,$event)">
-                                <input *ngIf="settings.showCheckbox" type="checkbox" [checked]="isSelected(item)" [disabled]="settings.limitSelection == selectedItems?.length && !isSelected(item)" />
+                                <input *ngIf="settings.showCheckbox" type="checkbox" [checked]="isSelected(item)" [disabled]="settings.limitSelection == selectedItems?.length && !isSelected(item)"
+                                />
                                 <label>{{item[settings.labelKey]}}</label>
                             </div>
                             <div class="pull-right" *ngIf="isSelected(item) && isRearrangeable">
@@ -132,10 +133,12 @@
                 </span>
                 <span *ngIf="!itemTempl && settings.lazyLoading">
                     <div [ngStyle]="{'height':totalHeight+'px'}" style="position: relative;">
-                        <li *ngFor="let item of chunkArray | listFilter:filter : settings.searchBy; let i = index;" style="position: absolute;width: 100%;" class="pure-checkbox" [styleProp]="chunkIndex[i]">
+                        <li *ngFor="let item of chunkArray | listFilter:filter : settings.searchBy; let i = index;" style="position: absolute;width: 100%;"
+                            class="pure-checkbox" [styleProp]="chunkIndex[i]">
                             <div class="clearfix">
                                 <div class="pull-left" (click)="onItemClick(item,i,$event)">
-                                    <input *ngIf="settings.showCheckbox" type="checkbox" [checked]="isSelected(item)" [disabled]="settings.limitSelection == selectedItems?.length && !isSelected(item)" />
+                                    <input *ngIf="settings.showCheckbox" type="checkbox" [checked]="isSelected(item)" [disabled]="settings.limitSelection == selectedItems?.length && !isSelected(item)"
+                                    />
                                     <label>{{item[settings.labelKey]}}</label>
                                 </div>
                                 <div class="pull-right" *ngIf="isSelected(item) && isRearrangeable">
@@ -166,7 +169,8 @@
                         <li *ngFor="let item of obj.value | listFilter:filter : settings.searchBy; let i = index;" class="pure-checkbox">
                             <div class="clearfix">
                                 <div class="pull-left" (click)="onItemClick(item,i,$event)">
-                                    <input *ngIf="settings.showCheckbox" type="checkbox" [checked]="isSelected(item)" [disabled]="settings.limitSelection == selectedItems?.length && !isSelected(item)" />
+                                    <input *ngIf="settings.showCheckbox" type="checkbox" [checked]="isSelected(item)" [disabled]="settings.limitSelection == selectedItems?.length && !isSelected(item)"
+                                    />
                                     <label>{{item[settings.labelKey]}}</label>
                                 </div>
                                 <div class="pull-right" *ngIf="isSelected(item) && isRearrangeable">
