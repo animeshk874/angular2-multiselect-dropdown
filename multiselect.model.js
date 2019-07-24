@@ -1,4 +1,4 @@
-var MyException = /** @class */ (function () {
+var MyException = (function () {
     function MyException(status, body) {
         this.status = status;
         this.body = body;

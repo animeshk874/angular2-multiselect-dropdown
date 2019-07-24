@@ -41,7 +41,6 @@
     "github-pages": "ng build --base-href /angular2-multiselect-dropdown/"
   },
   "private": false,
-  "dependencies": {},
   "devDependencies": {
     "@angular/common": "^4.0.0",
     "@angular/compiler": "^4.0.0",
@@ -91,14 +90,16 @@
     "to-string-loader": "^1.1.5",
     "ts-node": "^3.0.4",
     "tslint": "^5.2.0",
-    "typescript": "^2.3.2",
+    "typescript": "2.3.2",
     "webpack": "^2.5.1",
     "webpack-angular-externals": "^1.0.2",
     "webpack-rxjs-externals": "^1.0.0",
     "zone.js": "^0.8.10",
     "ng2-gist": "*",
     "primeng": "2.0.6",
-    "bootstrap": "^4.0.0-beta.2"
+    "bootstrap": "^4.0.0-beta.2",
+    "@types/tapable": "^0.2.5",
+    "@types/bluebird": "3.5.21"
   },
   "repository": {
     "type": "git",

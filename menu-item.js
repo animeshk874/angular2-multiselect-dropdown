@@ -1,56 +1,56 @@
 import { Component, TemplateRef, ContentChild, ViewContainerRef, Input } from '@angular/core';
-var Item = /** @class */ (function () {
+var Item = (function () {
     function Item() {
     }
-    Item.decorators = [
-        { type: Component, args: [{
-                    selector: 'c-item',
-                    template: ""
-                },] },
-    ];
-    /** @nocollapse */
-    Item.ctorParameters = function () { return []; };
-    Item.propDecorators = {
-        'template': [{ type: ContentChild, args: [TemplateRef,] },],
-    };
     return Item;
 }());
 export { Item };
-var Badge = /** @class */ (function () {
+Item.decorators = [
+    { type: Component, args: [{
+                selector: 'c-item',
+                template: ""
+            },] },
+];
+/** @nocollapse */
+Item.ctorParameters = function () { return []; };
+Item.propDecorators = {
+    'template': [{ type: ContentChild, args: [TemplateRef,] },],
+};
+var Badge = (function () {
     function Badge() {
     }
-    Badge.decorators = [
-        { type: Component, args: [{
-                    selector: 'c-badge',
-                    template: ""
-                },] },
-    ];
-    /** @nocollapse */
-    Badge.ctorParameters = function () { return []; };
-    Badge.propDecorators = {
-        'template': [{ type: ContentChild, args: [TemplateRef,] },],
-    };
     return Badge;
 }());
 export { Badge };
-var Search = /** @class */ (function () {
+Badge.decorators = [
+    { type: Component, args: [{
+                selector: 'c-badge',
+                template: ""
+            },] },
+];
+/** @nocollapse */
+Badge.ctorParameters = function () { return []; };
+Badge.propDecorators = {
+    'template': [{ type: ContentChild, args: [TemplateRef,] },],
+};
+var Search = (function () {
     function Search() {
     }
-    Search.decorators = [
-        { type: Component, args: [{
-                    selector: 'c-search',
-                    template: ""
-                },] },
-    ];
-    /** @nocollapse */
-    Search.ctorParameters = function () { return []; };
-    Search.propDecorators = {
-        'template': [{ type: ContentChild, args: [TemplateRef,] },],
-    };
     return Search;
 }());
 export { Search };
-var TemplateRenderer = /** @class */ (function () {
+Search.decorators = [
+    { type: Component, args: [{
+                selector: 'c-search',
+                template: ""
+            },] },
+];
+/** @nocollapse */
+Search.ctorParameters = function () { return []; };
+Search.propDecorators = {
+    'template': [{ type: ContentChild, args: [TemplateRef,] },],
+};
+var TemplateRenderer = (function () {
     function TemplateRenderer(viewContainer) {
         this.viewContainer = viewContainer;
     }
@@ -63,21 +63,21 @@ var TemplateRenderer = /** @class */ (function () {
     TemplateRenderer.prototype.ngOnDestroy = function () {
         this.view.destroy();
     };
-    TemplateRenderer.decorators = [
-        { type: Component, args: [{
-                    selector: 'c-templateRenderer',
-                    template: ""
-                },] },
-    ];
-    /** @nocollapse */
-    TemplateRenderer.ctorParameters = function () { return [
-        { type: ViewContainerRef, },
-    ]; };
-    TemplateRenderer.propDecorators = {
-        'data': [{ type: Input },],
-        'item': [{ type: Input },],
-    };
     return TemplateRenderer;
 }());
 export { TemplateRenderer };
+TemplateRenderer.decorators = [
+    { type: Component, args: [{
+                selector: 'c-templateRenderer',
+                template: ""
+            },] },
+];
+/** @nocollapse */
+TemplateRenderer.ctorParameters = function () { return [
+    { type: ViewContainerRef, },
+]; };
+TemplateRenderer.propDecorators = {
+    'data': [{ type: Input },],
+    'item': [{ type: Input },],
+};
 //# sourceMappingURL=menu-item.js.map

@@ -100,58 +100,58 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = __webpack_require__(1);
-var Item = /** @class */ (function () {
+var Item = (function () {
     function Item() {
     }
-    __decorate([
-        core_1.ContentChild(core_1.TemplateRef),
-        __metadata("design:type", core_1.TemplateRef)
-    ], Item.prototype, "template", void 0);
-    Item = __decorate([
-        core_1.Component({
-            selector: 'c-item',
-            template: ""
-        }),
-        __metadata("design:paramtypes", [])
-    ], Item);
     return Item;
 }());
+__decorate([
+    core_1.ContentChild(core_1.TemplateRef),
+    __metadata("design:type", core_1.TemplateRef)
+], Item.prototype, "template", void 0);
+Item = __decorate([
+    core_1.Component({
+        selector: 'c-item',
+        template: ""
+    }),
+    __metadata("design:paramtypes", [])
+], Item);
 exports.Item = Item;
-var Badge = /** @class */ (function () {
+var Badge = (function () {
     function Badge() {
     }
-    __decorate([
-        core_1.ContentChild(core_1.TemplateRef),
-        __metadata("design:type", core_1.TemplateRef)
-    ], Badge.prototype, "template", void 0);
-    Badge = __decorate([
-        core_1.Component({
-            selector: 'c-badge',
-            template: ""
-        }),
-        __metadata("design:paramtypes", [])
-    ], Badge);
     return Badge;
 }());
+__decorate([
+    core_1.ContentChild(core_1.TemplateRef),
+    __metadata("design:type", core_1.TemplateRef)
+], Badge.prototype, "template", void 0);
+Badge = __decorate([
+    core_1.Component({
+        selector: 'c-badge',
+        template: ""
+    }),
+    __metadata("design:paramtypes", [])
+], Badge);
 exports.Badge = Badge;
-var Search = /** @class */ (function () {
+var Search = (function () {
     function Search() {
     }
-    __decorate([
-        core_1.ContentChild(core_1.TemplateRef),
-        __metadata("design:type", core_1.TemplateRef)
-    ], Search.prototype, "template", void 0);
-    Search = __decorate([
-        core_1.Component({
-            selector: 'c-search',
-            template: ""
-        }),
-        __metadata("design:paramtypes", [])
-    ], Search);
     return Search;
 }());
+__decorate([
+    core_1.ContentChild(core_1.TemplateRef),
+    __metadata("design:type", core_1.TemplateRef)
+], Search.prototype, "template", void 0);
+Search = __decorate([
+    core_1.Component({
+        selector: 'c-search',
+        template: ""
+    }),
+    __metadata("design:paramtypes", [])
+], Search);
 exports.Search = Search;
-var TemplateRenderer = /** @class */ (function () {
+var TemplateRenderer = (function () {
     function TemplateRenderer(viewContainer) {
         this.viewContainer = viewContainer;
     }
@@ -164,23 +164,23 @@ var TemplateRenderer = /** @class */ (function () {
     TemplateRenderer.prototype.ngOnDestroy = function () {
         this.view.destroy();
     };
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Object)
-    ], TemplateRenderer.prototype, "data", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Object)
-    ], TemplateRenderer.prototype, "item", void 0);
-    TemplateRenderer = __decorate([
-        core_1.Component({
-            selector: 'c-templateRenderer',
-            template: ""
-        }),
-        __metadata("design:paramtypes", [core_1.ViewContainerRef])
-    ], TemplateRenderer);
     return TemplateRenderer;
 }());
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Object)
+], TemplateRenderer.prototype, "data", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Object)
+], TemplateRenderer.prototype, "item", void 0);
+TemplateRenderer = __decorate([
+    core_1.Component({
+        selector: 'c-templateRenderer',
+        template: ""
+    }),
+    __metadata("design:paramtypes", [core_1.ViewContainerRef])
+], TemplateRenderer);
 exports.TemplateRenderer = TemplateRenderer;
 
 
@@ -226,7 +226,7 @@ exports.DROPDOWN_CONTROL_VALIDATION = {
 };
 var noop = function () {
 };
-var AngularMultiSelect = /** @class */ (function () {
+var AngularMultiSelect = (function () {
     function AngularMultiSelect(_elementRef, cdr) {
         this._elementRef = _elementRef;
         this.cdr = cdr;
@@ -590,95 +590,95 @@ var AngularMultiSelect = /** @class */ (function () {
             this.updateView(this.scrollTop);
         }
     };
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Array)
-    ], AngularMultiSelect.prototype, "data", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Object)
-    ], AngularMultiSelect.prototype, "settings", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Object)
-    ], AngularMultiSelect.prototype, "isRearrangeable", void 0);
-    __decorate([
-        core_1.Output('onSelect'),
-        __metadata("design:type", core_1.EventEmitter)
-    ], AngularMultiSelect.prototype, "onSelect", void 0);
-    __decorate([
-        core_1.Output('onDeSelect'),
-        __metadata("design:type", core_1.EventEmitter)
-    ], AngularMultiSelect.prototype, "onDeSelect", void 0);
-    __decorate([
-        core_1.Output('onSelectAll'),
-        __metadata("design:type", core_1.EventEmitter)
-    ], AngularMultiSelect.prototype, "onSelectAll", void 0);
-    __decorate([
-        core_1.Output('onDeSelectAll'),
-        __metadata("design:type", core_1.EventEmitter)
-    ], AngularMultiSelect.prototype, "onDeSelectAll", void 0);
-    __decorate([
-        core_1.Output('onOpen'),
-        __metadata("design:type", core_1.EventEmitter)
-    ], AngularMultiSelect.prototype, "onOpen", void 0);
-    __decorate([
-        core_1.Output('onClose'),
-        __metadata("design:type", core_1.EventEmitter)
-    ], AngularMultiSelect.prototype, "onClose", void 0);
-    __decorate([
-        core_1.Output('onMoveItemUp'),
-        __metadata("design:type", core_1.EventEmitter)
-    ], AngularMultiSelect.prototype, "onMoveItemUp", void 0);
-    __decorate([
-        core_1.Output('onMoveItemDown'),
-        __metadata("design:type", core_1.EventEmitter)
-    ], AngularMultiSelect.prototype, "onMoveItemDown", void 0);
-    __decorate([
-        core_1.ContentChild(menu_item_1.Item),
-        __metadata("design:type", menu_item_1.Item)
-    ], AngularMultiSelect.prototype, "itemTempl", void 0);
-    __decorate([
-        core_1.ContentChild(menu_item_1.Badge),
-        __metadata("design:type", menu_item_1.Badge)
-    ], AngularMultiSelect.prototype, "badgeTempl", void 0);
-    __decorate([
-        core_1.ContentChild(menu_item_1.Search),
-        __metadata("design:type", menu_item_1.Search)
-    ], AngularMultiSelect.prototype, "searchTempl", void 0);
-    __decorate([
-        core_1.ViewChild('searchInput'),
-        __metadata("design:type", core_1.ElementRef)
-    ], AngularMultiSelect.prototype, "searchInput", void 0);
-    __decorate([
-        core_1.ViewChild('selectedList'),
-        __metadata("design:type", core_1.ElementRef)
-    ], AngularMultiSelect.prototype, "selectedListElem", void 0);
-    AngularMultiSelect = __decorate([
-        core_1.Component({
-            selector: 'angular2-multiselect',
-            template: __webpack_require__(8),
-            host: { '[class]': 'defaultSettings.classes' },
-            styles: [__webpack_require__(9)],
-            providers: [exports.DROPDOWN_CONTROL_VALUE_ACCESSOR, exports.DROPDOWN_CONTROL_VALIDATION]
-        }),
-        __metadata("design:paramtypes", [core_1.ElementRef, core_1.ChangeDetectorRef])
-    ], AngularMultiSelect);
     return AngularMultiSelect;
 }());
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Array)
+], AngularMultiSelect.prototype, "data", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Object)
+], AngularMultiSelect.prototype, "settings", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Object)
+], AngularMultiSelect.prototype, "isRearrangeable", void 0);
+__decorate([
+    core_1.Output('onSelect'),
+    __metadata("design:type", core_1.EventEmitter)
+], AngularMultiSelect.prototype, "onSelect", void 0);
+__decorate([
+    core_1.Output('onDeSelect'),
+    __metadata("design:type", core_1.EventEmitter)
+], AngularMultiSelect.prototype, "onDeSelect", void 0);
+__decorate([
+    core_1.Output('onSelectAll'),
+    __metadata("design:type", core_1.EventEmitter)
+], AngularMultiSelect.prototype, "onSelectAll", void 0);
+__decorate([
+    core_1.Output('onDeSelectAll'),
+    __metadata("design:type", core_1.EventEmitter)
+], AngularMultiSelect.prototype, "onDeSelectAll", void 0);
+__decorate([
+    core_1.Output('onOpen'),
+    __metadata("design:type", core_1.EventEmitter)
+], AngularMultiSelect.prototype, "onOpen", void 0);
+__decorate([
+    core_1.Output('onClose'),
+    __metadata("design:type", core_1.EventEmitter)
+], AngularMultiSelect.prototype, "onClose", void 0);
+__decorate([
+    core_1.Output('onMoveItemUp'),
+    __metadata("design:type", core_1.EventEmitter)
+], AngularMultiSelect.prototype, "onMoveItemUp", void 0);
+__decorate([
+    core_1.Output('onMoveItemDown'),
+    __metadata("design:type", core_1.EventEmitter)
+], AngularMultiSelect.prototype, "onMoveItemDown", void 0);
+__decorate([
+    core_1.ContentChild(menu_item_1.Item),
+    __metadata("design:type", menu_item_1.Item)
+], AngularMultiSelect.prototype, "itemTempl", void 0);
+__decorate([
+    core_1.ContentChild(menu_item_1.Badge),
+    __metadata("design:type", menu_item_1.Badge)
+], AngularMultiSelect.prototype, "badgeTempl", void 0);
+__decorate([
+    core_1.ContentChild(menu_item_1.Search),
+    __metadata("design:type", menu_item_1.Search)
+], AngularMultiSelect.prototype, "searchTempl", void 0);
+__decorate([
+    core_1.ViewChild('searchInput'),
+    __metadata("design:type", core_1.ElementRef)
+], AngularMultiSelect.prototype, "searchInput", void 0);
+__decorate([
+    core_1.ViewChild('selectedList'),
+    __metadata("design:type", core_1.ElementRef)
+], AngularMultiSelect.prototype, "selectedListElem", void 0);
+AngularMultiSelect = __decorate([
+    core_1.Component({
+        selector: 'angular2-multiselect',
+        template: __webpack_require__(8),
+        host: { '[class]': 'defaultSettings.classes' },
+        styles: [__webpack_require__(9)],
+        providers: [exports.DROPDOWN_CONTROL_VALUE_ACCESSOR, exports.DROPDOWN_CONTROL_VALIDATION]
+    }),
+    __metadata("design:paramtypes", [core_1.ElementRef, core_1.ChangeDetectorRef])
+], AngularMultiSelect);
 exports.AngularMultiSelect = AngularMultiSelect;
-var AngularMultiSelectModule = /** @class */ (function () {
+var AngularMultiSelectModule = (function () {
     function AngularMultiSelectModule() {
     }
-    AngularMultiSelectModule = __decorate([
-        core_1.NgModule({
-            imports: [common_1.CommonModule, forms_1.FormsModule],
-            declarations: [AngularMultiSelect, clickOutside_1.ClickOutsideDirective, clickOutside_1.ScrollDirective, clickOutside_1.styleDirective, list_filter_1.ListFilterPipe, menu_item_1.Item, menu_item_1.TemplateRenderer, menu_item_1.Badge, menu_item_1.Search, clickOutside_1.setPosition],
-            exports: [AngularMultiSelect, clickOutside_1.ClickOutsideDirective, clickOutside_1.ScrollDirective, clickOutside_1.styleDirective, list_filter_1.ListFilterPipe, menu_item_1.Item, menu_item_1.TemplateRenderer, menu_item_1.Badge, menu_item_1.Search, clickOutside_1.setPosition]
-        })
-    ], AngularMultiSelectModule);
     return AngularMultiSelectModule;
 }());
+AngularMultiSelectModule = __decorate([
+    core_1.NgModule({
+        imports: [common_1.CommonModule, forms_1.FormsModule],
+        declarations: [AngularMultiSelect, clickOutside_1.ClickOutsideDirective, clickOutside_1.ScrollDirective, clickOutside_1.styleDirective, list_filter_1.ListFilterPipe, menu_item_1.Item, menu_item_1.TemplateRenderer, menu_item_1.Badge, menu_item_1.Search, clickOutside_1.setPosition],
+        exports: [AngularMultiSelect, clickOutside_1.ClickOutsideDirective, clickOutside_1.ScrollDirective, clickOutside_1.styleDirective, list_filter_1.ListFilterPipe, menu_item_1.Item, menu_item_1.TemplateRenderer, menu_item_1.Badge, menu_item_1.Search, clickOutside_1.setPosition]
+    })
+], AngularMultiSelectModule);
 exports.AngularMultiSelectModule = AngularMultiSelectModule;
 
 
@@ -699,7 +699,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = __webpack_require__(1);
-var ClickOutsideDirective = /** @class */ (function () {
+var ClickOutsideDirective = (function () {
     function ClickOutsideDirective(_elementRef) {
         this._elementRef = _elementRef;
         this.clickOutside = new core_1.EventEmitter();
@@ -713,27 +713,27 @@ var ClickOutsideDirective = /** @class */ (function () {
             this.clickOutside.emit(event);
         }
     };
-    __decorate([
-        core_1.Output(),
-        __metadata("design:type", Object)
-    ], ClickOutsideDirective.prototype, "clickOutside", void 0);
-    __decorate([
-        core_1.HostListener('document:click', ['$event', '$event.target']),
-        core_1.HostListener('document:touchstart', ['$event', '$event.target']),
-        __metadata("design:type", Function),
-        __metadata("design:paramtypes", [MouseEvent, HTMLElement]),
-        __metadata("design:returntype", void 0)
-    ], ClickOutsideDirective.prototype, "onClick", null);
-    ClickOutsideDirective = __decorate([
-        core_1.Directive({
-            selector: '[clickOutside]'
-        }),
-        __metadata("design:paramtypes", [core_1.ElementRef])
-    ], ClickOutsideDirective);
     return ClickOutsideDirective;
 }());
+__decorate([
+    core_1.Output(),
+    __metadata("design:type", Object)
+], ClickOutsideDirective.prototype, "clickOutside", void 0);
+__decorate([
+    core_1.HostListener('document:click', ['$event', '$event.target']),
+    core_1.HostListener('document:touchstart', ['$event', '$event.target']),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [MouseEvent, HTMLElement]),
+    __metadata("design:returntype", void 0)
+], ClickOutsideDirective.prototype, "onClick", null);
+ClickOutsideDirective = __decorate([
+    core_1.Directive({
+        selector: '[clickOutside]'
+    }),
+    __metadata("design:paramtypes", [core_1.ElementRef])
+], ClickOutsideDirective);
 exports.ClickOutsideDirective = ClickOutsideDirective;
-var ScrollDirective = /** @class */ (function () {
+var ScrollDirective = (function () {
     function ScrollDirective(_elementRef) {
         this._elementRef = _elementRef;
         this.scroll = new core_1.EventEmitter();
@@ -741,26 +741,26 @@ var ScrollDirective = /** @class */ (function () {
     ScrollDirective.prototype.onClick = function (event, targetElement) {
         this.scroll.emit(event);
     };
-    __decorate([
-        core_1.Output(),
-        __metadata("design:type", Object)
-    ], ScrollDirective.prototype, "scroll", void 0);
-    __decorate([
-        core_1.HostListener('scroll', ['$event']),
-        __metadata("design:type", Function),
-        __metadata("design:paramtypes", [MouseEvent, HTMLElement]),
-        __metadata("design:returntype", void 0)
-    ], ScrollDirective.prototype, "onClick", null);
-    ScrollDirective = __decorate([
-        core_1.Directive({
-            selector: '[scroll]'
-        }),
-        __metadata("design:paramtypes", [core_1.ElementRef])
-    ], ScrollDirective);
     return ScrollDirective;
 }());
+__decorate([
+    core_1.Output(),
+    __metadata("design:type", Object)
+], ScrollDirective.prototype, "scroll", void 0);
+__decorate([
+    core_1.HostListener('scroll', ['$event']),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [MouseEvent, HTMLElement]),
+    __metadata("design:returntype", void 0)
+], ScrollDirective.prototype, "onClick", null);
+ScrollDirective = __decorate([
+    core_1.Directive({
+        selector: '[scroll]'
+    }),
+    __metadata("design:paramtypes", [core_1.ElementRef])
+], ScrollDirective);
 exports.ScrollDirective = ScrollDirective;
-var styleDirective = /** @class */ (function () {
+var styleDirective = (function () {
     function styleDirective(el) {
         this.el = el;
     }
@@ -770,20 +770,20 @@ var styleDirective = /** @class */ (function () {
     styleDirective.prototype.ngOnChanges = function () {
         this.el.nativeElement.style.top = this.styleVal;
     };
-    __decorate([
-        core_1.Input('styleProp'),
-        __metadata("design:type", Number)
-    ], styleDirective.prototype, "styleVal", void 0);
-    styleDirective = __decorate([
-        core_1.Directive({
-            selector: '[styleProp]'
-        }),
-        __metadata("design:paramtypes", [core_1.ElementRef])
-    ], styleDirective);
     return styleDirective;
 }());
+__decorate([
+    core_1.Input('styleProp'),
+    __metadata("design:type", Number)
+], styleDirective.prototype, "styleVal", void 0);
+styleDirective = __decorate([
+    core_1.Directive({
+        selector: '[styleProp]'
+    }),
+    __metadata("design:paramtypes", [core_1.ElementRef])
+], styleDirective);
 exports.styleDirective = styleDirective;
-var setPosition = /** @class */ (function () {
+var setPosition = (function () {
     function setPosition(el) {
         this.el = el;
     }
@@ -797,18 +797,18 @@ var setPosition = /** @class */ (function () {
             this.el.nativeElement.style.bottom = parseInt(this.height + 15 + "") + 'px';
         }
     };
-    __decorate([
-        core_1.Input('setPosition'),
-        __metadata("design:type", Number)
-    ], setPosition.prototype, "height", void 0);
-    setPosition = __decorate([
-        core_1.Directive({
-            selector: '[setPosition]'
-        }),
-        __metadata("design:paramtypes", [core_1.ElementRef])
-    ], setPosition);
     return setPosition;
 }());
+__decorate([
+    core_1.Input('setPosition'),
+    __metadata("design:type", Number)
+], setPosition.prototype, "height", void 0);
+setPosition = __decorate([
+    core_1.Directive({
+        selector: '[setPosition]'
+    }),
+    __metadata("design:paramtypes", [core_1.ElementRef])
+], setPosition);
 exports.setPosition = setPosition;
 
 
@@ -826,7 +826,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = __webpack_require__(1);
-var ListFilterPipe = /** @class */ (function () {
+var ListFilterPipe = (function () {
     function ListFilterPipe() {
     }
     ListFilterPipe.prototype.transform = function (items, filter, searchBy) {
@@ -858,14 +858,14 @@ var ListFilterPipe = /** @class */ (function () {
         }
         return found;
     };
-    ListFilterPipe = __decorate([
-        core_1.Pipe({
-            name: 'listFilter',
-            pure: false
-        })
-    ], ListFilterPipe);
     return ListFilterPipe;
 }());
+ListFilterPipe = __decorate([
+    core_1.Pipe({
+        name: 'listFilter',
+        pure: false
+    })
+], ListFilterPipe);
 exports.ListFilterPipe = ListFilterPipe;
 
 
@@ -876,7 +876,7 @@ exports.ListFilterPipe = ListFilterPipe;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var MyException = /** @class */ (function () {
+var MyException = (function () {
     function MyException(status, body) {
         this.status = status;
         this.body = body;
@@ -895,7 +895,7 @@ exports = module.exports = __webpack_require__(7)(false);
 
 
 // module
-exports.push([module.i, ".cuppa-dropdown {\n  position: relative; }\n\n.c-btn {\n  display: inline-block;\n  background: #fff;\n  border: 1px solid #ccc;\n  border-radius: 3px;\n  font-size: 14px;\n  color: #333; }\n\n.c-btn.disabled {\n  background: #ccc; }\n\n.disabled {\n  color: #ccc; }\n\n.c-btn:focus {\n  outline: none; }\n\n.selected-list .c-list {\n  float: left;\n  padding: 0px;\n  margin: 0px;\n  width: calc(100% - 20px); }\n  .selected-list .c-list .c-token {\n    list-style: none;\n    padding: 2px 8px;\n    background: #0079FE;\n    color: #fff;\n    border-radius: 2px;\n    margin-right: 4px;\n    margin-top: 2px;\n    float: left;\n    position: relative;\n    padding-right: 25px; }\n    .selected-list .c-list .c-token .c-label {\n      display: block;\n      float: left; }\n    .selected-list .c-list .c-token .c-remove {\n      position: absolute;\n      right: 8px;\n      top: 50%;\n      transform: translateY(-50%);\n      width: 10px; }\n      .selected-list .c-list .c-token .c-remove svg {\n        fill: #fff; }\n\n.selected-list .fa-angle-down, .selected-list .fa-angle-up {\n  font-size: 15pt;\n  position: absolute;\n  right: 10px;\n  top: 50%;\n  transform: translateY(-50%); }\n\n.selected-list .c-angle-down, .selected-list .c-angle-up {\n  width: 15px;\n  height: 15px;\n  position: absolute;\n  right: 10px;\n  top: 50%;\n  transform: translateY(-50%);\n  pointer-events: none; }\n  .selected-list .c-angle-down svg, .selected-list .c-angle-up svg {\n    fill: #333; }\n\n.selected-list .countplaceholder {\n  position: absolute;\n  right: 30px;\n  top: 50%;\n  transform: translateY(-50%); }\n\n.selected-list .c-btn {\n  width: 100%;\n  box-shadow: 0px 1px 5px #959595;\n  padding: 10px;\n  cursor: pointer;\n  display: flex;\n  position: relative; }\n  .selected-list .c-btn .c-icon {\n    position: absolute;\n    right: 5px;\n    top: 50%;\n    transform: translateY(-50%); }\n\n.dropdown-list {\n  position: absolute;\n  padding-top: 14px;\n  width: 100%;\n  z-index: 9999; }\n  .dropdown-list ul {\n    padding: 0px;\n    list-style: none;\n    overflow: auto;\n    margin: 0px; }\n    .dropdown-list ul li {\n      padding: 10px 10px;\n      cursor: pointer;\n      text-align: left; }\n    .dropdown-list ul li:first-child {\n      padding-top: 10px; }\n    .dropdown-list ul li:last-child {\n      padding-bottom: 10px; }\n    .dropdown-list ul li:hover {\n      background: #f5f5f5; }\n  .dropdown-list ::-webkit-scrollbar {\n    width: 8px; }\n  .dropdown-list ::-webkit-scrollbar-thumb {\n    background: #cccccc;\n    border-radius: 5px; }\n  .dropdown-list ::-webkit-scrollbar-track {\n    background: #f2f2f2; }\n\n.arrow-up, .arrow-down {\n  width: 0;\n  height: 0;\n  border-left: 13px solid transparent;\n  border-right: 13px solid transparent;\n  border-bottom: 15px solid #fff;\n  margin-left: 15px;\n  position: absolute;\n  top: 0; }\n\n.arrow-down {\n  bottom: -14px;\n  top: unset;\n  transform: rotate(180deg); }\n\n.arrow-2 {\n  border-bottom: 15px solid #ccc;\n  top: -1px; }\n\n.arrow-down.arrow-2 {\n  top: unset;\n  bottom: -16px; }\n\n.list-area {\n  border: 1px solid #ccc;\n  border-radius: 3px;\n  background: #fff;\n  margin: 0px;\n  box-shadow: 0px 1px 5px #959595; }\n\n.select-all {\n  padding: 10px;\n  border-bottom: 1px solid #ccc;\n  text-align: left; }\n\n.list-filter {\n  border-bottom: 1px solid #ccc;\n  position: relative;\n  padding-left: 35px;\n  height: 35px; }\n  .list-filter input {\n    border: 0px;\n    width: 100%;\n    height: 100%;\n    padding: 0px; }\n  .list-filter input:focus {\n    outline: none; }\n  .list-filter .c-search {\n    position: absolute;\n    top: 9px;\n    left: 10px;\n    width: 15px;\n    height: 15px; }\n    .list-filter .c-search svg {\n      fill: #888; }\n\n.pure-checkbox input[type=\"checkbox\"] {\n  border: 0;\n  clip: rect(0 0 0 0);\n  height: 1px;\n  margin: -1px;\n  overflow: hidden;\n  padding: 0;\n  position: absolute;\n  width: 1px; }\n\n.pure-checkbox input[type=\"checkbox\"]:focus + label:before,\n.pure-checkbox input[type=\"checkbox\"]:hover + label:before {\n  border-color: #0079FE;\n  background-color: #f2f2f2; }\n\n.pure-checkbox input[type=\"checkbox\"]:active + label:before {\n  transition-duration: 0s; }\n\n.pure-checkbox input[type=\"checkbox\"] + label {\n  position: relative;\n  padding-left: 2em;\n  vertical-align: middle;\n  user-select: none;\n  cursor: pointer;\n  margin: 0px;\n  color: #000;\n  font-weight: 300; }\n\n.pure-checkbox input[type=\"checkbox\"] + label:before {\n  box-sizing: content-box;\n  content: '';\n  color: #0079FE;\n  position: absolute;\n  top: 50%;\n  left: 0;\n  width: 14px;\n  height: 14px;\n  margin-top: -9px;\n  border: 2px solid #0079FE;\n  text-align: center;\n  transition: all 0.4s ease; }\n\n.pure-checkbox input[type=\"checkbox\"] + label:after {\n  box-sizing: content-box;\n  content: '';\n  background-color: #0079FE;\n  position: absolute;\n  top: 50%;\n  left: 4px;\n  width: 10px;\n  height: 10px;\n  margin-top: -5px;\n  transform: scale(0);\n  transform-origin: 50%;\n  transition: transform 200ms ease-out; }\n\n.pure-checkbox input[type=\"checkbox\"]:disabled + label:before {\n  border-color: #cccccc; }\n\n.pure-checkbox input[type=\"checkbox\"]:disabled:focus + label:before\n.pure-checkbox input[type=\"checkbox\"]:disabled:hover + label:before {\n  background-color: inherit; }\n\n.pure-checkbox input[type=\"checkbox\"]:disabled:checked + label:before {\n  background-color: #cccccc; }\n\n.pure-checkbox input[type=\"checkbox\"] + label:after {\n  background-color: transparent;\n  top: 50%;\n  left: 4px;\n  width: 8px;\n  height: 3px;\n  margin-top: -4px;\n  border-style: solid;\n  border-color: #ffffff;\n  border-width: 0 0 3px 3px;\n  border-image: none;\n  transform: rotate(-45deg) scale(0); }\n\n.pure-checkbox input[type=\"checkbox\"]:checked + label:after {\n  content: '';\n  transform: rotate(-45deg) scale(1);\n  transition: transform 200ms ease-out; }\n\n.pure-checkbox input[type=\"radio\"]:checked + label:before {\n  background-color: white; }\n\n.pure-checkbox input[type=\"radio\"]:checked + label:after {\n  transform: scale(1); }\n\n.pure-checkbox input[type=\"radio\"] + label:before {\n  border-radius: 50%; }\n\n.pure-checkbox input[type=\"checkbox\"]:checked + label:before {\n  background: #0079FE; }\n\n.pure-checkbox input[type=\"checkbox\"]:checked + label:after {\n  transform: rotate(-45deg) scale(1); }\n\n.list-message {\n  text-align: center;\n  margin: 0px;\n  padding: 15px 0px;\n  font-size: initial; }\n\n.list-grp {\n  padding: 0 15px !important; }\n\n.list-grp h4 {\n  text-transform: capitalize;\n  margin: 15px 0px 0px 0px;\n  font-size: 14px;\n  font-weight: 700; }\n\n.list-grp > li {\n  padding-left: 15px !important; }\n", ""]);
+exports.push([module.i, ".cuppa-dropdown {\n  position: relative; }\n\n.cuppa-dropdown.single-selection-dd .pure-checkbox input[type=\"checkbox\"] + label:before {\n  border-radius: 50%; }\n\n.cuppa-dropdown.single-selection-dd .pure-checkbox input[type=\"checkbox\"] + label:after {\n  left: 4px;\n  width: 10px;\n  height: 10px;\n  margin-top: -5px;\n  background: white;\n  border-width: 0;\n  transform: none;\n  border-radius: 50%; }\n\n.c-btn {\n  display: inline-block;\n  background: #fff;\n  border: 1px solid #ccc;\n  border-radius: 3px;\n  font-size: 14px;\n  color: #333; }\n\n.c-btn.disabled {\n  background: #ccc; }\n\n.disabled {\n  color: #ccc; }\n\n.c-btn:focus {\n  outline: none; }\n\n.selected-list .c-list {\n  float: left;\n  padding: 0px;\n  margin: 0px;\n  width: calc(100% - 20px); }\n  .selected-list .c-list .c-token {\n    list-style: none;\n    padding: 2px 8px;\n    background: #0079fe;\n    color: #fff;\n    border-radius: 2px;\n    margin-right: 4px;\n    margin-top: 2px;\n    float: left;\n    position: relative;\n    padding-right: 25px; }\n    .selected-list .c-list .c-token .c-label {\n      display: block;\n      float: left; }\n    .selected-list .c-list .c-token .c-remove {\n      position: absolute;\n      right: 8px;\n      top: 50%;\n      transform: translateY(-50%);\n      width: 10px; }\n      .selected-list .c-list .c-token .c-remove svg {\n        fill: #fff; }\n\n.selected-list .fa-angle-down,\n.selected-list .fa-angle-up {\n  font-size: 15pt;\n  position: absolute;\n  right: 10px;\n  top: 50%;\n  transform: translateY(-50%); }\n\n.selected-list .c-angle-down,\n.selected-list .c-angle-up {\n  width: 15px;\n  height: 15px;\n  position: absolute;\n  right: 10px;\n  top: 50%;\n  transform: translateY(-50%);\n  pointer-events: none; }\n  .selected-list .c-angle-down svg,\n  .selected-list .c-angle-up svg {\n    fill: #333; }\n\n.selected-list .countplaceholder {\n  position: absolute;\n  right: 30px;\n  top: 50%;\n  transform: translateY(-50%); }\n\n.selected-list .c-btn {\n  width: 100%;\n  box-shadow: 0px 1px 5px #959595;\n  padding: 10px;\n  cursor: pointer;\n  display: flex;\n  position: relative; }\n  .selected-list .c-btn .c-icon {\n    position: absolute;\n    right: 5px;\n    top: 50%;\n    transform: translateY(-50%); }\n\n.dropdown-list {\n  position: absolute;\n  padding-top: 14px;\n  width: 100%;\n  z-index: 9999; }\n  .dropdown-list ul {\n    padding: 0px;\n    list-style: none;\n    overflow: auto;\n    margin: 0px; }\n    .dropdown-list ul li {\n      padding: 10px 10px;\n      cursor: pointer;\n      text-align: left; }\n    .dropdown-list ul li:first-child {\n      padding-top: 10px; }\n    .dropdown-list ul li:last-child {\n      padding-bottom: 10px; }\n    .dropdown-list ul li:hover {\n      background: #f5f5f5; }\n  .dropdown-list ::-webkit-scrollbar {\n    width: 8px; }\n  .dropdown-list ::-webkit-scrollbar-thumb {\n    background: #cccccc;\n    border-radius: 5px; }\n  .dropdown-list ::-webkit-scrollbar-track {\n    background: #f2f2f2; }\n\n.arrow-up,\n.arrow-down {\n  width: 0;\n  height: 0;\n  border-left: 13px solid transparent;\n  border-right: 13px solid transparent;\n  border-bottom: 15px solid #fff;\n  margin-left: 15px;\n  position: absolute;\n  top: 0; }\n\n.arrow-down {\n  bottom: -14px;\n  top: unset;\n  transform: rotate(180deg); }\n\n.arrow-2 {\n  border-bottom: 15px solid #ccc;\n  top: -1px; }\n\n.arrow-down.arrow-2 {\n  top: unset;\n  bottom: -16px; }\n\n.list-area {\n  border: 1px solid #ccc;\n  border-radius: 3px;\n  background: #fff;\n  margin: 0px;\n  box-shadow: 0px 1px 5px #959595; }\n\n.select-all {\n  padding: 10px;\n  border-bottom: 1px solid #ccc;\n  text-align: left; }\n\n.list-filter {\n  border-bottom: 1px solid #ccc;\n  position: relative;\n  padding-left: 35px;\n  height: 35px; }\n  .list-filter input {\n    border: 0px;\n    width: 100%;\n    height: 100%;\n    padding: 0px; }\n  .list-filter input:focus {\n    outline: none; }\n  .list-filter .c-search {\n    position: absolute;\n    top: 9px;\n    left: 10px;\n    width: 15px;\n    height: 15px; }\n    .list-filter .c-search svg {\n      fill: #888; }\n\n.pure-checkbox input[type=\"checkbox\"] {\n  border: 0;\n  clip: rect(0 0 0 0);\n  height: 1px;\n  margin: -1px;\n  overflow: hidden;\n  padding: 0;\n  position: absolute;\n  width: 1px; }\n\n.pure-checkbox input[type=\"checkbox\"]:focus + label:before,\n.pure-checkbox input[type=\"checkbox\"]:hover + label:before {\n  border-color: #0079fe;\n  background-color: #f2f2f2; }\n\n.pure-checkbox input[type=\"checkbox\"]:active + label:before {\n  transition-duration: 0s; }\n\n.pure-checkbox input[type=\"checkbox\"] + label {\n  position: relative;\n  padding-left: 2em;\n  vertical-align: middle;\n  user-select: none;\n  cursor: pointer;\n  margin: 0px;\n  color: #000;\n  font-weight: 300; }\n\n.pure-checkbox input[type=\"checkbox\"] + label:before {\n  box-sizing: content-box;\n  content: '';\n  color: #0079fe;\n  position: absolute;\n  top: 50%;\n  left: 0;\n  width: 14px;\n  height: 14px;\n  margin-top: -9px;\n  border: 2px solid #0079fe;\n  text-align: center;\n  transition: all 0.4s ease; }\n\n.pure-checkbox input[type=\"checkbox\"] + label:after {\n  box-sizing: content-box;\n  content: '';\n  background-color: #0079fe;\n  position: absolute;\n  top: 50%;\n  left: 4px;\n  width: 10px;\n  height: 10px;\n  margin-top: -5px;\n  transform: scale(0);\n  transform-origin: 50%;\n  transition: transform 200ms ease-out; }\n\n.pure-checkbox input[type=\"checkbox\"]:disabled + label:before {\n  border-color: #cccccc; }\n\n.pure-checkbox input[type=\"checkbox\"]:disabled:focus + label:before\n.pure-checkbox input[type=\"checkbox\"]:disabled:hover + label:before {\n  background-color: inherit; }\n\n.pure-checkbox input[type=\"checkbox\"]:disabled:checked + label:before {\n  background-color: #cccccc; }\n\n.pure-checkbox input[type=\"checkbox\"] + label:after {\n  background-color: transparent;\n  top: 50%;\n  left: 4px;\n  width: 8px;\n  height: 3px;\n  margin-top: -4px;\n  border-style: solid;\n  border-color: #ffffff;\n  border-width: 0 0 3px 3px;\n  border-image: none;\n  transform: rotate(-45deg) scale(0); }\n\n.pure-checkbox input[type=\"checkbox\"]:checked + label:after {\n  content: '';\n  transform: rotate(-45deg) scale(1);\n  transition: transform 200ms ease-out; }\n\n.pure-checkbox input[type=\"radio\"]:checked + label:before {\n  background-color: white; }\n\n.pure-checkbox input[type=\"radio\"]:checked + label:after {\n  transform: scale(1); }\n\n.pure-checkbox input[type=\"radio\"] + label:before {\n  border-radius: 50%; }\n\n.pure-checkbox input[type=\"checkbox\"]:checked + label:before {\n  background: #0079fe; }\n\n.pure-checkbox input[type=\"checkbox\"]:checked + label:after {\n  transform: rotate(-45deg) scale(1); }\n\n.list-message {\n  text-align: center;\n  margin: 0px;\n  padding: 15px 0px;\n  font-size: initial; }\n\n.list-grp {\n  padding: 0 15px !important; }\n\n.list-grp h4 {\n  text-transform: capitalize;\n  margin: 15px 0px 0px 0px;\n  font-size: 14px;\n  font-weight: 700; }\n\n.list-grp > li {\n  padding-left: 15px !important; }\n", ""]);
 
 // exports
 
@@ -986,7 +986,7 @@ function toComment(sourceMap) {
 /* 8 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"cuppa-dropdown\" (clickOutside)=\"closeDropdown()\">\n    <div class=\"selected-list\" #selectedList>\n        <div class=\"c-btn\" (click)=\"toggleDropdown($event)\" [ngClass]=\"{'disabled': settings.disabled}\">\n            <span *ngIf=\"selectedItems?.length == 0\">{{settings.text}}</span>\n            <span *ngIf=\"settings.singleSelection\">\n                <span *ngFor=\"let item of selectedItems;trackBy: trackByFn.bind(this);\">\n                    {{item[settings.labelKey]}}\n                </span>\n            </span>\n            <div class=\"c-list\" *ngIf=\"selectedItems?.length > 0 && !settings.singleSelection\">\n                <div class=\"c-token\" *ngFor=\"let item of selectedItems;trackBy: trackByFn.bind(this);let k = index\" [hidden]=\"k > settings.badgeShowLimit-1\">\n                    <span *ngIf=\"!badgeTempl\" class=\"c-label\">{{item[settings.labelKey]}}</span>\n                    <span *ngIf=\"badgeTempl\" class=\"c-label\">\n                        <c-templateRenderer [data]=\"badgeTempl\" [item]=\"item\"></c-templateRenderer>\n                    </span>\n                    <span class=\"c-remove\" (click)=\"onItemClick(item,k,$event)\">\n                        <svg width=\"100%\" height=\"100%\" version=\"1.1\" id=\"Capa_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\"\n                            x=\"0px\" y=\"0px\" viewBox=\"0 0 47.971 47.971\" style=\"enable-background:new 0 0 47.971 47.971;\" xml:space=\"preserve\">\n                            <g>\n                                <path d=\"M28.228,23.986L47.092,5.122c1.172-1.171,1.172-3.071,0-4.242c-1.172-1.172-3.07-1.172-4.242,0L23.986,19.744L5.121,0.88\n\t\tc-1.172-1.172-3.07-1.172-4.242,0c-1.172,1.171-1.172,3.071,0,4.242l18.865,18.864L0.879,42.85c-1.172,1.171-1.172,3.071,0,4.242\n\t\tC1.465,47.677,2.233,47.97,3,47.97s1.535-0.293,2.121-0.879l18.865-18.864L42.85,47.091c0.586,0.586,1.354,0.879,2.121,0.879\n\t\ts1.535-0.293,2.121-0.879c1.172-1.171,1.172-3.071,0-4.242L28.228,23.986z\" />\n                            </g>\n                        </svg>\n\n                    </span>\n                </div>\n            </div>\n            <span class=\"countplaceholder\" *ngIf=\"selectedItems?.length > settings.badgeShowLimit\">+{{selectedItems?.length - settings.badgeShowLimit }}</span>\n            <span *ngIf=\"!isActive\" class=\"c-angle-down\">\n                <svg version=\"1.1\" id=\"Capa_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n                    width=\"100%\" height=\"100%\" viewBox=\"0 0 612 612\" style=\"enable-background:new 0 0 612 612;\" xml:space=\"preserve\">\n                    <g>\n                        <g id=\"_x31_0_34_\">\n                            <g>\n                                <path d=\"M604.501,134.782c-9.999-10.05-26.222-10.05-36.221,0L306.014,422.558L43.721,134.782\n\t\t\t\tc-9.999-10.05-26.223-10.05-36.222,0s-9.999,26.35,0,36.399l279.103,306.241c5.331,5.357,12.422,7.652,19.386,7.296\n\t\t\t\tc6.988,0.356,14.055-1.939,19.386-7.296l279.128-306.268C614.5,161.106,614.5,144.832,604.501,134.782z\" />\n                            </g>\n                        </g>\n                    </g>\n                </svg>\n\n            </span>\n            <span *ngIf=\"isActive\" class=\"c-angle-up\">\n                <svg version=\"1.1\" id=\"Capa_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n                    width=\"100%\" height=\"100%\" viewBox=\"0 0 612 612\" style=\"enable-background:new 0 0 612 612;\" xml:space=\"preserve\">\n                    <g>\n                        <g id=\"_x39__30_\">\n                            <g>\n                                <path d=\"M604.501,440.509L325.398,134.956c-5.331-5.357-12.423-7.627-19.386-7.27c-6.989-0.357-14.056,1.913-19.387,7.27\n\t\t\t\tL7.499,440.509c-9.999,10.024-9.999,26.298,0,36.323s26.223,10.024,36.222,0l262.293-287.164L568.28,476.832\n\t\t\t\tc9.999,10.024,26.222,10.024,36.221,0C614.5,466.809,614.5,450.534,604.501,440.509z\" />\n                            </g>\n                        </g>\n                    </g>\n\n                </svg>\n\n            </span>\n        </div>\n    </div>\n    <div [setPosition]=\"selectedListHeight?.val\" class=\"dropdown-list\" [ngClass]=\"{'dropdown-list-top': settings.position == 'top'}\"\n        [hidden]=\"!isActive\">\n        <div [ngClass]=\"{'arrow-up': settings.position == 'bottom', 'arrow-down': settings.position == 'top'}\" class=\"arrow-2\"></div>\n        <div [ngClass]=\"{'arrow-up': settings.position == 'bottom', 'arrow-down': settings.position == 'top'}\"></div>\n        <div class=\"list-area\">\n            <div class=\"pure-checkbox select-all\" *ngIf=\"settings.enableCheckAll && !settings.singleSelection && !settings.limitSelection\"\n                (click)=\"toggleSelectAll()\">\n                <input *ngIf=\"settings.showCheckbox\" type=\"checkbox\" [checked]=\"isSelectAll\" [disabled]=\"settings.limitSelection == selectedItems?.length\"\n                />\n                <label>\n                    <span [hidden]=\"isSelectAll\">{{settings.selectAllText}}</span>\n                    <span [hidden]=\"!isSelectAll\">{{settings.unSelectAllText}}</span>\n                </label>\n            </div>\n            <div class=\"list-filter\" *ngIf=\"settings.enableSearchFilter\">\n                <span class=\"c-search\">\n                    <svg version=\"1.1\" id=\"Capa_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n                        width=\"100%\" height=\"100%\" viewBox=\"0 0 615.52 615.52\" style=\"enable-background:new 0 0 615.52 615.52;\"\n                        xml:space=\"preserve\">\n                        <g>\n                            <g>\n                                <g id=\"Search__x28_and_thou_shall_find_x29_\">\n                                    <g>\n                                        <path d=\"M602.531,549.736l-184.31-185.368c26.679-37.72,42.528-83.729,42.528-133.548C460.75,103.35,357.997,0,231.258,0\n\t\t\t\t\tC104.518,0,1.765,103.35,1.765,230.82c0,127.47,102.753,230.82,229.493,230.82c49.53,0,95.271-15.944,132.78-42.777\n\t\t\t\t\tl184.31,185.366c7.482,7.521,17.292,11.291,27.102,11.291c9.812,0,19.62-3.77,27.083-11.291\n\t\t\t\t\tC617.496,589.188,617.496,564.777,602.531,549.736z M355.9,319.763l-15.042,21.273L319.7,356.174\n\t\t\t\t\tc-26.083,18.658-56.667,28.526-88.442,28.526c-84.365,0-152.995-69.035-152.995-153.88c0-84.846,68.63-153.88,152.995-153.88\n\t\t\t\t\ts152.996,69.034,152.996,153.88C384.271,262.769,374.462,293.526,355.9,319.763z\" />\n                                    </g>\n                                </g>\n                            </g>\n                        </g>\n\n                    </svg>\n\n                </span>\n                <input class=\"c-input\" *ngIf=\"!settings.lazyLoading && !searchTempl\" #searchInput type=\"text\" [placeholder]=\"settings.searchPlaceholderText\"\n                    [(ngModel)]=\"filter\">\n                <input class=\"c-input\" *ngIf=\"settings.lazyLoading && !searchTempl\" #searchInput type=\"text\" [placeholder]=\"settings.searchPlaceholderText\"\n                    (keyup)=\"filterInfiniteList($event)\">\n                <c-templateRenderer *ngIf=\"searchTempl\" [data]=\"searchTempl\" [item]=\"item\"></c-templateRenderer>\n            </div>\n            <ul *ngIf=\"!settings.groupBy\" [style.maxHeight]=\"settings.maxHeight+'px'\" class=\"lazyContainer\">\n                <span *ngIf=\"itemTempl\">\n                    <li *ngFor=\"let item of data | listFilter: filter : settings.searchBy; let i = index;\" (click)=\"onItemClick(item,i,$event)\"\n                        class=\"pure-checkbox\">\n                        <input *ngIf=\"settings.showCheckbox\" type=\"checkbox\" [checked]=\"isSelected(item)\" [disabled]=\"settings.limitSelection == selectedItems?.length && !isSelected(item)\"\n                        />\n                        <label></label>\n                        <c-templateRenderer [data]=\"itemTempl\" [item]=\"item\"></c-templateRenderer>\n                    </li>\n                </span>\n                <span *ngIf=\"!itemTempl && !settings.lazyLoading\">\n                    <li *ngFor=\"let item of data | listFilter:filter : settings.searchBy; let i = index;\" class=\"pure-checkbox\">\n                        <div class=\"clearfix\">\n                            <div class=\"pull-left\" (click)=\"onItemClick(item,i,$event)\">\n                                <input *ngIf=\"settings.showCheckbox\" type=\"checkbox\" [checked]=\"isSelected(item)\" [disabled]=\"settings.limitSelection == selectedItems?.length && !isSelected(item)\" />\n                                <label>{{item[settings.labelKey]}}</label>\n                            </div>\n                            <div class=\"pull-right\" *ngIf=\"isSelected(item) && isRearrangeable\">\n                                <span class=\"disabled fa fa-chevron-up\" *ngIf=\"i === 0\"></span>\n                                <span *ngIf=\"i > 0\" class=\"fa fa-chevron-up\" (click)=\"onMoveUp(item, i, $event)\"></span>\n                                <span class=\"disabled fa fa-chevron-down\" *ngIf=\"i === data.length - 1 || (i !== (data.length - 1)) && !isSelected(data[i + 1])\"></span>\n                                <span class=\"fa fa-chevron-down\" *ngIf=\"(i !== (data.length - 1)) && isSelected(data[i + 1])\" (click)=\"onMoveDown(item, i, $event)\"></span>\n                            </div>\n                        </div>\n                    </li>\n                </span>\n                <span *ngIf=\"!itemTempl && settings.lazyLoading\">\n                    <div [ngStyle]=\"{'height':totalHeight+'px'}\" style=\"position: relative;\">\n                        <li *ngFor=\"let item of chunkArray | listFilter:filter : settings.searchBy; let i = index;\" style=\"position: absolute;width: 100%;\" class=\"pure-checkbox\" [styleProp]=\"chunkIndex[i]\">\n                            <div class=\"clearfix\">\n                                <div class=\"pull-left\" (click)=\"onItemClick(item,i,$event)\">\n                                    <input *ngIf=\"settings.showCheckbox\" type=\"checkbox\" [checked]=\"isSelected(item)\" [disabled]=\"settings.limitSelection == selectedItems?.length && !isSelected(item)\" />\n                                    <label>{{item[settings.labelKey]}}</label>\n                                </div>\n                                <div class=\"pull-right\" *ngIf=\"isSelected(item) && isRearrangeable\">\n                                    <span class=\"disabled fa fa-chevron-up\" *ngIf=\"i === 0\"></span>\n                                    <span *ngIf=\"i > 0\" class=\"fa fa-chevron-up\" (click)=\"onMoveUp(item, i, $event)\"></span>\n\n                                    <span class=\"disabled fa fa-chevron-down\" *ngIf=\"(i !== (data.length - 1)) && !isSelected(data[i + 1])\"></span>\n                                    <span class=\"fa fa-chevron-down\" *ngIf=\"(i !== (data.length - 1)) && isSelected(data[i + 1])\" (click)=\"onMoveDown(item, i, $event)\"></span>\n                                </div>\n                            </div>\n                        </li>\n                    </div>\n                </span>\n            </ul>\n            <div *ngIf=\"settings.groupBy\" [style.maxHeight]=\"settings.maxHeight+'px'\" style=\"overflow: auto;\">\n                <ul *ngFor=\"let obj of groupedData ; let i = index;\" class=\"list-grp\">\n                    <h4 *ngIf=\"(obj.value | listFilter:filter : settings.searchBy ).length > 0\">{{obj.key}}</h4>\n                    <span *ngIf=\"itemTempl\">\n                        <li *ngFor=\"let item of obj.value | listFilter:filter : settings.searchBy; let i = index;\" (click)=\"onItemClick(item,i,$event)\"\n                            class=\"pure-checkbox\">\n                            <input *ngIf=\"settings.showCheckbox\" type=\"checkbox\" [checked]=\"isSelected(item)\" [disabled]=\"settings.limitSelection == selectedItems?.length && !isSelected(item)\"\n                            />\n                            <label></label>\n                            <c-templateRenderer [data]=\"itemTempl\" [item]=\"item\"></c-templateRenderer>\n                        </li>\n                    </span>\n                    <span *ngIf=\"!itemTempl\">\n                        <li *ngFor=\"let item of obj.value | listFilter:filter : settings.searchBy; let i = index;\" class=\"pure-checkbox\">\n                            <div class=\"clearfix\">\n                                <div class=\"pull-left\" (click)=\"onItemClick(item,i,$event)\">\n                                    <input *ngIf=\"settings.showCheckbox\" type=\"checkbox\" [checked]=\"isSelected(item)\" [disabled]=\"settings.limitSelection == selectedItems?.length && !isSelected(item)\" />\n                                    <label>{{item[settings.labelKey]}}</label>\n                                </div>\n                                <div class=\"pull-right\" *ngIf=\"isSelected(item) && isRearrangeable\">\n                                    <span class=\"disabled fa fa-chevron-up\" *ngIf=\"i === 0\"></span>\n                                    <span *ngIf=\"i > 0\" class=\"fa fa-chevron-up\" (click)=\"onMoveUp(item, i, $event)\"></span>\n                                    <span class=\"disabled fa fa-chevron-down\" *ngIf=\"(i !== (data.length - 1)) && !isSelected(data[i + 1])\"></span>\n                                    <span class=\"fa fa-chevron-down\" *ngIf=\"(i !== (data.length - 1)) && isSelected(data[i + 1])\" (click)=\"onMoveDown(item, i, $event)\"></span>\n                                </div>\n                            </div>\n\n                        </li>\n                    </span>\n                </ul>\n            </div>\n            <h5 class=\"list-message\" *ngIf=\"data?.length == 0\">{{settings.noDataLabel}}</h5>\n        </div>\n    </div>\n</div>\n"
+module.exports = "<div class=\"cuppa-dropdown\" [ngClass]=\"{'single-selection-dd': settings.singleSelection}\" (clickOutside)=\"closeDropdown()\">\n    <div class=\"selected-list\" #selectedList>\n        <div class=\"c-btn\" (click)=\"toggleDropdown($event)\" [ngClass]=\"{'disabled': settings.disabled}\">\n            <span *ngIf=\"selectedItems?.length == 0\">{{settings.text}}</span>\n            <span *ngIf=\"settings.singleSelection\">\n                <span *ngFor=\"let item of selectedItems;trackBy: trackByFn.bind(this);\">\n                    {{item[settings.labelKey]}}\n                </span>\n            </span>\n            <div class=\"c-list\" *ngIf=\"selectedItems?.length > 0 && !settings.singleSelection\">\n                <div class=\"c-token\" *ngFor=\"let item of selectedItems;trackBy: trackByFn.bind(this);let k = index\" [hidden]=\"k > settings.badgeShowLimit-1\">\n                    <span *ngIf=\"!badgeTempl\" class=\"c-label\">{{item[settings.labelKey]}}</span>\n                    <span *ngIf=\"badgeTempl\" class=\"c-label\">\n                        <c-templateRenderer [data]=\"badgeTempl\" [item]=\"item\"></c-templateRenderer>\n                    </span>\n                    <span class=\"c-remove\" (click)=\"onItemClick(item,k,$event)\">\n                        <svg width=\"100%\" height=\"100%\" version=\"1.1\" id=\"Capa_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\"\n                            x=\"0px\" y=\"0px\" viewBox=\"0 0 47.971 47.971\" style=\"enable-background:new 0 0 47.971 47.971;\" xml:space=\"preserve\">\n                            <g>\n                                <path d=\"M28.228,23.986L47.092,5.122c1.172-1.171,1.172-3.071,0-4.242c-1.172-1.172-3.07-1.172-4.242,0L23.986,19.744L5.121,0.88\n\t\tc-1.172-1.172-3.07-1.172-4.242,0c-1.172,1.171-1.172,3.071,0,4.242l18.865,18.864L0.879,42.85c-1.172,1.171-1.172,3.071,0,4.242\n\t\tC1.465,47.677,2.233,47.97,3,47.97s1.535-0.293,2.121-0.879l18.865-18.864L42.85,47.091c0.586,0.586,1.354,0.879,2.121,0.879\n\t\ts1.535-0.293,2.121-0.879c1.172-1.171,1.172-3.071,0-4.242L28.228,23.986z\" />\n                            </g>\n                        </svg>\n\n                    </span>\n                </div>\n            </div>\n            <span class=\"countplaceholder\" *ngIf=\"selectedItems?.length > settings.badgeShowLimit\">+{{selectedItems?.length - settings.badgeShowLimit }}</span>\n            <span *ngIf=\"!isActive\" class=\"c-angle-down\">\n                <svg version=\"1.1\" id=\"Capa_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n                    width=\"100%\" height=\"100%\" viewBox=\"0 0 612 612\" style=\"enable-background:new 0 0 612 612;\" xml:space=\"preserve\">\n                    <g>\n                        <g id=\"_x31_0_34_\">\n                            <g>\n                                <path d=\"M604.501,134.782c-9.999-10.05-26.222-10.05-36.221,0L306.014,422.558L43.721,134.782\n\t\t\t\tc-9.999-10.05-26.223-10.05-36.222,0s-9.999,26.35,0,36.399l279.103,306.241c5.331,5.357,12.422,7.652,19.386,7.296\n\t\t\t\tc6.988,0.356,14.055-1.939,19.386-7.296l279.128-306.268C614.5,161.106,614.5,144.832,604.501,134.782z\" />\n                            </g>\n                        </g>\n                    </g>\n                </svg>\n\n            </span>\n            <span *ngIf=\"isActive\" class=\"c-angle-up\">\n                <svg version=\"1.1\" id=\"Capa_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n                    width=\"100%\" height=\"100%\" viewBox=\"0 0 612 612\" style=\"enable-background:new 0 0 612 612;\" xml:space=\"preserve\">\n                    <g>\n                        <g id=\"_x39__30_\">\n                            <g>\n                                <path d=\"M604.501,440.509L325.398,134.956c-5.331-5.357-12.423-7.627-19.386-7.27c-6.989-0.357-14.056,1.913-19.387,7.27\n\t\t\t\tL7.499,440.509c-9.999,10.024-9.999,26.298,0,36.323s26.223,10.024,36.222,0l262.293-287.164L568.28,476.832\n\t\t\t\tc9.999,10.024,26.222,10.024,36.221,0C614.5,466.809,614.5,450.534,604.501,440.509z\" />\n                            </g>\n                        </g>\n                    </g>\n\n                </svg>\n\n            </span>\n        </div>\n    </div>\n    <div [setPosition]=\"selectedListHeight?.val\" class=\"dropdown-list\" [ngClass]=\"{'dropdown-list-top': settings.position == 'top'}\"\n        [hidden]=\"!isActive\">\n        <div [ngClass]=\"{'arrow-up': settings.position == 'bottom', 'arrow-down': settings.position == 'top'}\" class=\"arrow-2\"></div>\n        <div [ngClass]=\"{'arrow-up': settings.position == 'bottom', 'arrow-down': settings.position == 'top'}\"></div>\n        <div class=\"list-area\">\n            <div class=\"pure-checkbox select-all\" *ngIf=\"settings.enableCheckAll && !settings.singleSelection && !settings.limitSelection\"\n                (click)=\"toggleSelectAll()\">\n                <input *ngIf=\"settings.showCheckbox\" type=\"checkbox\" [checked]=\"isSelectAll\" [disabled]=\"settings.limitSelection == selectedItems?.length\"\n                />\n                <label>\n                    <span [hidden]=\"isSelectAll\">{{settings.selectAllText}}</span>\n                    <span [hidden]=\"!isSelectAll\">{{settings.unSelectAllText}}</span>\n                </label>\n            </div>\n            <div class=\"list-filter\" *ngIf=\"settings.enableSearchFilter\">\n                <span class=\"c-search\">\n                    <svg version=\"1.1\" id=\"Capa_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n                        width=\"100%\" height=\"100%\" viewBox=\"0 0 615.52 615.52\" style=\"enable-background:new 0 0 615.52 615.52;\"\n                        xml:space=\"preserve\">\n                        <g>\n                            <g>\n                                <g id=\"Search__x28_and_thou_shall_find_x29_\">\n                                    <g>\n                                        <path d=\"M602.531,549.736l-184.31-185.368c26.679-37.72,42.528-83.729,42.528-133.548C460.75,103.35,357.997,0,231.258,0\n\t\t\t\t\tC104.518,0,1.765,103.35,1.765,230.82c0,127.47,102.753,230.82,229.493,230.82c49.53,0,95.271-15.944,132.78-42.777\n\t\t\t\t\tl184.31,185.366c7.482,7.521,17.292,11.291,27.102,11.291c9.812,0,19.62-3.77,27.083-11.291\n\t\t\t\t\tC617.496,589.188,617.496,564.777,602.531,549.736z M355.9,319.763l-15.042,21.273L319.7,356.174\n\t\t\t\t\tc-26.083,18.658-56.667,28.526-88.442,28.526c-84.365,0-152.995-69.035-152.995-153.88c0-84.846,68.63-153.88,152.995-153.88\n\t\t\t\t\ts152.996,69.034,152.996,153.88C384.271,262.769,374.462,293.526,355.9,319.763z\" />\n                                    </g>\n                                </g>\n                            </g>\n                        </g>\n\n                    </svg>\n\n                </span>\n                <input class=\"c-input\" *ngIf=\"!settings.lazyLoading && !searchTempl\" #searchInput type=\"text\" [placeholder]=\"settings.searchPlaceholderText\"\n                    [(ngModel)]=\"filter\">\n                <input class=\"c-input\" *ngIf=\"settings.lazyLoading && !searchTempl\" #searchInput type=\"text\" [placeholder]=\"settings.searchPlaceholderText\"\n                    (keyup)=\"filterInfiniteList($event)\">\n                <c-templateRenderer *ngIf=\"searchTempl\" [data]=\"searchTempl\" [item]=\"item\"></c-templateRenderer>\n            </div>\n            <ul *ngIf=\"!settings.groupBy\" [style.maxHeight]=\"settings.maxHeight+'px'\" class=\"lazyContainer\">\n                <span *ngIf=\"itemTempl\">\n                    <li *ngFor=\"let item of data | listFilter: filter : settings.searchBy; let i = index;\" (click)=\"onItemClick(item,i,$event)\"\n                        class=\"pure-checkbox\">\n                        <input *ngIf=\"settings.showCheckbox\" type=\"checkbox\" [checked]=\"isSelected(item)\" [disabled]=\"settings.limitSelection == selectedItems?.length && !isSelected(item)\"\n                        />\n                        <label></label>\n                        <c-templateRenderer [data]=\"itemTempl\" [item]=\"item\"></c-templateRenderer>\n                    </li>\n                </span>\n                <span *ngIf=\"!itemTempl && !settings.lazyLoading\">\n                    <li *ngFor=\"let item of data | listFilter:filter : settings.searchBy; let i = index;\" class=\"pure-checkbox\">\n                        <div class=\"clearfix\">\n                            <div class=\"pull-left\" (click)=\"onItemClick(item,i,$event)\">\n                                <input *ngIf=\"settings.showCheckbox\" type=\"checkbox\" [checked]=\"isSelected(item)\" [disabled]=\"settings.limitSelection == selectedItems?.length && !isSelected(item)\"\n                                />\n                                <label>{{item[settings.labelKey]}}</label>\n                            </div>\n                            <div class=\"pull-right\" *ngIf=\"isSelected(item) && isRearrangeable\">\n                                <span class=\"disabled fa fa-chevron-up\" *ngIf=\"i === 0\"></span>\n                                <span *ngIf=\"i > 0\" class=\"fa fa-chevron-up\" (click)=\"onMoveUp(item, i, $event)\"></span>\n                                <span class=\"disabled fa fa-chevron-down\" *ngIf=\"i === data.length - 1 || (i !== (data.length - 1)) && !isSelected(data[i + 1])\"></span>\n                                <span class=\"fa fa-chevron-down\" *ngIf=\"(i !== (data.length - 1)) && isSelected(data[i + 1])\" (click)=\"onMoveDown(item, i, $event)\"></span>\n                            </div>\n                        </div>\n                    </li>\n                </span>\n                <span *ngIf=\"!itemTempl && settings.lazyLoading\">\n                    <div [ngStyle]=\"{'height':totalHeight+'px'}\" style=\"position: relative;\">\n                        <li *ngFor=\"let item of chunkArray | listFilter:filter : settings.searchBy; let i = index;\" style=\"position: absolute;width: 100%;\"\n                            class=\"pure-checkbox\" [styleProp]=\"chunkIndex[i]\">\n                            <div class=\"clearfix\">\n                                <div class=\"pull-left\" (click)=\"onItemClick(item,i,$event)\">\n                                    <input *ngIf=\"settings.showCheckbox\" type=\"checkbox\" [checked]=\"isSelected(item)\" [disabled]=\"settings.limitSelection == selectedItems?.length && !isSelected(item)\"\n                                    />\n                                    <label>{{item[settings.labelKey]}}</label>\n                                </div>\n                                <div class=\"pull-right\" *ngIf=\"isSelected(item) && isRearrangeable\">\n                                    <span class=\"disabled fa fa-chevron-up\" *ngIf=\"i === 0\"></span>\n                                    <span *ngIf=\"i > 0\" class=\"fa fa-chevron-up\" (click)=\"onMoveUp(item, i, $event)\"></span>\n\n                                    <span class=\"disabled fa fa-chevron-down\" *ngIf=\"(i !== (data.length - 1)) && !isSelected(data[i + 1])\"></span>\n                                    <span class=\"fa fa-chevron-down\" *ngIf=\"(i !== (data.length - 1)) && isSelected(data[i + 1])\" (click)=\"onMoveDown(item, i, $event)\"></span>\n                                </div>\n                            </div>\n                        </li>\n                    </div>\n                </span>\n            </ul>\n            <div *ngIf=\"settings.groupBy\" [style.maxHeight]=\"settings.maxHeight+'px'\" style=\"overflow: auto;\">\n                <ul *ngFor=\"let obj of groupedData ; let i = index;\" class=\"list-grp\">\n                    <h4 *ngIf=\"(obj.value | listFilter:filter : settings.searchBy ).length > 0\">{{obj.key}}</h4>\n                    <span *ngIf=\"itemTempl\">\n                        <li *ngFor=\"let item of obj.value | listFilter:filter : settings.searchBy; let i = index;\" (click)=\"onItemClick(item,i,$event)\"\n                            class=\"pure-checkbox\">\n                            <input *ngIf=\"settings.showCheckbox\" type=\"checkbox\" [checked]=\"isSelected(item)\" [disabled]=\"settings.limitSelection == selectedItems?.length && !isSelected(item)\"\n                            />\n                            <label></label>\n                            <c-templateRenderer [data]=\"itemTempl\" [item]=\"item\"></c-templateRenderer>\n                        </li>\n                    </span>\n                    <span *ngIf=\"!itemTempl\">\n                        <li *ngFor=\"let item of obj.value | listFilter:filter : settings.searchBy; let i = index;\" class=\"pure-checkbox\">\n                            <div class=\"clearfix\">\n                                <div class=\"pull-left\" (click)=\"onItemClick(item,i,$event)\">\n                                    <input *ngIf=\"settings.showCheckbox\" type=\"checkbox\" [checked]=\"isSelected(item)\" [disabled]=\"settings.limitSelection == selectedItems?.length && !isSelected(item)\"\n                                    />\n                                    <label>{{item[settings.labelKey]}}</label>\n                                </div>\n                                <div class=\"pull-right\" *ngIf=\"isSelected(item) && isRearrangeable\">\n                                    <span class=\"disabled fa fa-chevron-up\" *ngIf=\"i === 0\"></span>\n                                    <span *ngIf=\"i > 0\" class=\"fa fa-chevron-up\" (click)=\"onMoveUp(item, i, $event)\"></span>\n                                    <span class=\"disabled fa fa-chevron-down\" *ngIf=\"(i !== (data.length - 1)) && !isSelected(data[i + 1])\"></span>\n                                    <span class=\"fa fa-chevron-down\" *ngIf=\"(i !== (data.length - 1)) && isSelected(data[i + 1])\" (click)=\"onMoveDown(item, i, $event)\"></span>\n                                </div>\n                            </div>\n\n                        </li>\n                    </span>\n                </ul>\n            </div>\n            <h5 class=\"list-message\" *ngIf=\"data?.length == 0\">{{settings.noDataLabel}}</h5>\n        </div>\n    </div>\n</div>\n"
 
 /***/ }),
 /* 9 */

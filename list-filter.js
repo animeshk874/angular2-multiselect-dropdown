@@ -1,5 +1,5 @@
 import { Pipe } from '@angular/core';
-var ListFilterPipe = /** @class */ (function () {
+var ListFilterPipe = (function () {
     function ListFilterPipe() {
     }
     ListFilterPipe.prototype.transform = function (items, filter, searchBy) {
@@ -31,15 +31,15 @@ var ListFilterPipe = /** @class */ (function () {
         }
         return found;
     };
-    ListFilterPipe.decorators = [
-        { type: Pipe, args: [{
-                    name: 'listFilter',
-                    pure: false
-                },] },
-    ];
-    /** @nocollapse */
-    ListFilterPipe.ctorParameters = function () { return []; };
     return ListFilterPipe;
 }());
 export { ListFilterPipe };
+ListFilterPipe.decorators = [
+    { type: Pipe, args: [{
+                name: 'listFilter',
+                pure: false
+            },] },
+];
+/** @nocollapse */
+ListFilterPipe.ctorParameters = function () { return []; };
 //# sourceMappingURL=list-filter.js.map

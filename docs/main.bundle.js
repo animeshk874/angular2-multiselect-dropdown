@@ -36,7 +36,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-var ClickOutsideDirective = /** @class */ (function () {
+var ClickOutsideDirective = (function () {
     function ClickOutsideDirective(_elementRef) {
         this._elementRef = _elementRef;
         this.clickOutside = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
@@ -50,28 +50,27 @@ var ClickOutsideDirective = /** @class */ (function () {
             this.clickOutside.emit(event);
         }
     };
-    var _a, _b, _c;
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-        __metadata("design:type", Object)
-    ], ClickOutsideDirective.prototype, "clickOutside", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["HostListener"])('document:click', ['$event', '$event.target']),
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["HostListener"])('document:touchstart', ['$event', '$event.target']),
-        __metadata("design:type", Function),
-        __metadata("design:paramtypes", [typeof (_a = typeof MouseEvent !== "undefined" && MouseEvent) === "function" && _a || Object, typeof (_b = typeof HTMLElement !== "undefined" && HTMLElement) === "function" && _b || Object]),
-        __metadata("design:returntype", void 0)
-    ], ClickOutsideDirective.prototype, "onClick", null);
-    ClickOutsideDirective = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Directive"])({
-            selector: '[clickOutside]'
-        }),
-        __metadata("design:paramtypes", [typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"]) === "function" && _c || Object])
-    ], ClickOutsideDirective);
     return ClickOutsideDirective;
 }());
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+    __metadata("design:type", Object)
+], ClickOutsideDirective.prototype, "clickOutside", void 0);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["HostListener"])('document:click', ['$event', '$event.target']),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["HostListener"])('document:touchstart', ['$event', '$event.target']),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, Object]),
+    __metadata("design:returntype", void 0)
+], ClickOutsideDirective.prototype, "onClick", null);
+ClickOutsideDirective = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Directive"])({
+        selector: '[clickOutside]'
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"]) === "function" && _a || Object])
+], ClickOutsideDirective);
 
-var ScrollDirective = /** @class */ (function () {
+var ScrollDirective = (function () {
     function ScrollDirective(_elementRef) {
         this._elementRef = _elementRef;
         this.scroll = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
@@ -79,27 +78,26 @@ var ScrollDirective = /** @class */ (function () {
     ScrollDirective.prototype.onClick = function (event, targetElement) {
         this.scroll.emit(event);
     };
-    var _d, _e, _f;
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-        __metadata("design:type", Object)
-    ], ScrollDirective.prototype, "scroll", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["HostListener"])('scroll', ['$event']),
-        __metadata("design:type", Function),
-        __metadata("design:paramtypes", [typeof (_d = typeof MouseEvent !== "undefined" && MouseEvent) === "function" && _d || Object, typeof (_e = typeof HTMLElement !== "undefined" && HTMLElement) === "function" && _e || Object]),
-        __metadata("design:returntype", void 0)
-    ], ScrollDirective.prototype, "onClick", null);
-    ScrollDirective = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Directive"])({
-            selector: '[scroll]'
-        }),
-        __metadata("design:paramtypes", [typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"]) === "function" && _f || Object])
-    ], ScrollDirective);
     return ScrollDirective;
 }());
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+    __metadata("design:type", Object)
+], ScrollDirective.prototype, "scroll", void 0);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["HostListener"])('scroll', ['$event']),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, Object]),
+    __metadata("design:returntype", void 0)
+], ScrollDirective.prototype, "onClick", null);
+ScrollDirective = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Directive"])({
+        selector: '[scroll]'
+    }),
+    __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"]) === "function" && _b || Object])
+], ScrollDirective);
 
-var styleDirective = /** @class */ (function () {
+var styleDirective = (function () {
     function styleDirective(el) {
         this.el = el;
     }
@@ -109,21 +107,20 @@ var styleDirective = /** @class */ (function () {
     styleDirective.prototype.ngOnChanges = function () {
         this.el.nativeElement.style.top = this.styleVal;
     };
-    var _g;
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('styleProp'),
-        __metadata("design:type", Number)
-    ], styleDirective.prototype, "styleVal", void 0);
-    styleDirective = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Directive"])({
-            selector: '[styleProp]'
-        }),
-        __metadata("design:paramtypes", [typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"]) === "function" && _g || Object])
-    ], styleDirective);
     return styleDirective;
 }());
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('styleProp'),
+    __metadata("design:type", Number)
+], styleDirective.prototype, "styleVal", void 0);
+styleDirective = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Directive"])({
+        selector: '[styleProp]'
+    }),
+    __metadata("design:paramtypes", [typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"]) === "function" && _c || Object])
+], styleDirective);
 
-var setPosition = /** @class */ (function () {
+var setPosition = (function () {
     function setPosition(el) {
         this.el = el;
     }
@@ -137,20 +134,20 @@ var setPosition = /** @class */ (function () {
             this.el.nativeElement.style.bottom = parseInt(this.height + 15 + "") + 'px';
         }
     };
-    var _h;
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('setPosition'),
-        __metadata("design:type", Number)
-    ], setPosition.prototype, "height", void 0);
-    setPosition = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Directive"])({
-            selector: '[setPosition]'
-        }),
-        __metadata("design:paramtypes", [typeof (_h = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"]) === "function" && _h || Object])
-    ], setPosition);
     return setPosition;
 }());
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('setPosition'),
+    __metadata("design:type", Number)
+], setPosition.prototype, "height", void 0);
+setPosition = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Directive"])({
+        selector: '[setPosition]'
+    }),
+    __metadata("design:paramtypes", [typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"]) === "function" && _d || Object])
+], setPosition);
 
+var _a, _b, _c, _d;
 //# sourceMappingURL=/Users/jigneshchudasama/Projects/angular2-multiselect-dropdown/src/clickOutside.js.map
 
 /***/ }),
@@ -168,7 +165,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 
-var ListFilterPipe = /** @class */ (function () {
+var ListFilterPipe = (function () {
     function ListFilterPipe() {
     }
     ListFilterPipe.prototype.transform = function (items, filter, searchBy) {
@@ -200,14 +197,14 @@ var ListFilterPipe = /** @class */ (function () {
         }
         return found;
     };
-    ListFilterPipe = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Pipe"])({
-            name: 'listFilter',
-            pure: false
-        })
-    ], ListFilterPipe);
     return ListFilterPipe;
 }());
+ListFilterPipe = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Pipe"])({
+        name: 'listFilter',
+        pure: false
+    })
+], ListFilterPipe);
 
 //# sourceMappingURL=/Users/jigneshchudasama/Projects/angular2-multiselect-dropdown/src/list-filter.js.map
 
@@ -232,61 +229,58 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-var Item = /** @class */ (function () {
+var Item = (function () {
     function Item() {
     }
-    var _a;
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ContentChild"])(__WEBPACK_IMPORTED_MODULE_0__angular_core__["TemplateRef"]),
-        __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["TemplateRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["TemplateRef"]) === "function" && _a || Object)
-    ], Item.prototype, "template", void 0);
-    Item = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'c-item',
-            template: ""
-        }),
-        __metadata("design:paramtypes", [])
-    ], Item);
     return Item;
 }());
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ContentChild"])(__WEBPACK_IMPORTED_MODULE_0__angular_core__["TemplateRef"]),
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["TemplateRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["TemplateRef"]) === "function" && _a || Object)
+], Item.prototype, "template", void 0);
+Item = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'c-item',
+        template: ""
+    }),
+    __metadata("design:paramtypes", [])
+], Item);
 
-var Badge = /** @class */ (function () {
+var Badge = (function () {
     function Badge() {
     }
-    var _b;
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ContentChild"])(__WEBPACK_IMPORTED_MODULE_0__angular_core__["TemplateRef"]),
-        __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["TemplateRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["TemplateRef"]) === "function" && _b || Object)
-    ], Badge.prototype, "template", void 0);
-    Badge = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'c-badge',
-            template: ""
-        }),
-        __metadata("design:paramtypes", [])
-    ], Badge);
     return Badge;
 }());
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ContentChild"])(__WEBPACK_IMPORTED_MODULE_0__angular_core__["TemplateRef"]),
+    __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["TemplateRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["TemplateRef"]) === "function" && _b || Object)
+], Badge.prototype, "template", void 0);
+Badge = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'c-badge',
+        template: ""
+    }),
+    __metadata("design:paramtypes", [])
+], Badge);
 
-var Search = /** @class */ (function () {
+var Search = (function () {
     function Search() {
     }
-    var _c;
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ContentChild"])(__WEBPACK_IMPORTED_MODULE_0__angular_core__["TemplateRef"]),
-        __metadata("design:type", typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["TemplateRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["TemplateRef"]) === "function" && _c || Object)
-    ], Search.prototype, "template", void 0);
-    Search = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'c-search',
-            template: ""
-        }),
-        __metadata("design:paramtypes", [])
-    ], Search);
     return Search;
 }());
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ContentChild"])(__WEBPACK_IMPORTED_MODULE_0__angular_core__["TemplateRef"]),
+    __metadata("design:type", typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["TemplateRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["TemplateRef"]) === "function" && _c || Object)
+], Search.prototype, "template", void 0);
+Search = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'c-search',
+        template: ""
+    }),
+    __metadata("design:paramtypes", [])
+], Search);
 
-var TemplateRenderer = /** @class */ (function () {
+var TemplateRenderer = (function () {
     function TemplateRenderer(viewContainer) {
         this.viewContainer = viewContainer;
     }
@@ -299,25 +293,25 @@ var TemplateRenderer = /** @class */ (function () {
     TemplateRenderer.prototype.ngOnDestroy = function () {
         this.view.destroy();
     };
-    var _d;
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
-        __metadata("design:type", Object)
-    ], TemplateRenderer.prototype, "data", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
-        __metadata("design:type", Object)
-    ], TemplateRenderer.prototype, "item", void 0);
-    TemplateRenderer = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'c-templateRenderer',
-            template: ""
-        }),
-        __metadata("design:paramtypes", [typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewContainerRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewContainerRef"]) === "function" && _d || Object])
-    ], TemplateRenderer);
     return TemplateRenderer;
 }());
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+    __metadata("design:type", Object)
+], TemplateRenderer.prototype, "data", void 0);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+    __metadata("design:type", Object)
+], TemplateRenderer.prototype, "item", void 0);
+TemplateRenderer = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'c-templateRenderer',
+        template: ""
+    }),
+    __metadata("design:paramtypes", [typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewContainerRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewContainerRef"]) === "function" && _d || Object])
+], TemplateRenderer);
 
+var _a, _b, _c, _d;
 //# sourceMappingURL=/Users/jigneshchudasama/Projects/angular2-multiselect-dropdown/src/menu-item.js.map
 
 /***/ }),
@@ -380,7 +374,7 @@ var DROPDOWN_CONTROL_VALIDATION = {
 };
 var noop = function () {
 };
-var AngularMultiSelect = /** @class */ (function () {
+var AngularMultiSelect = (function () {
     function AngularMultiSelect(_elementRef, cdr) {
         this._elementRef = _elementRef;
         this.cdr = cdr;
@@ -744,97 +738,97 @@ var AngularMultiSelect = /** @class */ (function () {
             this.updateView(this.scrollTop);
         }
     };
-    var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o, _p, _q, _r;
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
-        __metadata("design:type", typeof (_a = typeof Array !== "undefined" && Array) === "function" && _a || Object)
-    ], AngularMultiSelect.prototype, "data", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
-        __metadata("design:type", Object)
-    ], AngularMultiSelect.prototype, "settings", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
-        __metadata("design:type", Object)
-    ], AngularMultiSelect.prototype, "isRearrangeable", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])('onSelect'),
-        __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _b || Object)
-    ], AngularMultiSelect.prototype, "onSelect", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])('onDeSelect'),
-        __metadata("design:type", typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _c || Object)
-    ], AngularMultiSelect.prototype, "onDeSelect", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])('onSelectAll'),
-        __metadata("design:type", typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _d || Object)
-    ], AngularMultiSelect.prototype, "onSelectAll", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])('onDeSelectAll'),
-        __metadata("design:type", typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _e || Object)
-    ], AngularMultiSelect.prototype, "onDeSelectAll", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])('onOpen'),
-        __metadata("design:type", typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _f || Object)
-    ], AngularMultiSelect.prototype, "onOpen", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])('onClose'),
-        __metadata("design:type", typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _g || Object)
-    ], AngularMultiSelect.prototype, "onClose", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])('onMoveItemUp'),
-        __metadata("design:type", typeof (_h = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _h || Object)
-    ], AngularMultiSelect.prototype, "onMoveItemUp", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])('onMoveItemDown'),
-        __metadata("design:type", typeof (_j = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _j || Object)
-    ], AngularMultiSelect.prototype, "onMoveItemDown", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ContentChild"])(__WEBPACK_IMPORTED_MODULE_6__menu_item__["b" /* Item */]),
-        __metadata("design:type", typeof (_k = typeof __WEBPACK_IMPORTED_MODULE_6__menu_item__["b" /* Item */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6__menu_item__["b" /* Item */]) === "function" && _k || Object)
-    ], AngularMultiSelect.prototype, "itemTempl", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ContentChild"])(__WEBPACK_IMPORTED_MODULE_6__menu_item__["a" /* Badge */]),
-        __metadata("design:type", typeof (_l = typeof __WEBPACK_IMPORTED_MODULE_6__menu_item__["a" /* Badge */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6__menu_item__["a" /* Badge */]) === "function" && _l || Object)
-    ], AngularMultiSelect.prototype, "badgeTempl", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ContentChild"])(__WEBPACK_IMPORTED_MODULE_6__menu_item__["c" /* Search */]),
-        __metadata("design:type", typeof (_m = typeof __WEBPACK_IMPORTED_MODULE_6__menu_item__["c" /* Search */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6__menu_item__["c" /* Search */]) === "function" && _m || Object)
-    ], AngularMultiSelect.prototype, "searchTempl", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('searchInput'),
-        __metadata("design:type", typeof (_o = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"]) === "function" && _o || Object)
-    ], AngularMultiSelect.prototype, "searchInput", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('selectedList'),
-        __metadata("design:type", typeof (_p = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"]) === "function" && _p || Object)
-    ], AngularMultiSelect.prototype, "selectedListElem", void 0);
-    AngularMultiSelect = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'angular2-multiselect',
-            template: __webpack_require__("./src/app/angular2-multiselect-dropdown/multiselect.component.html"),
-            host: { '[class]': 'defaultSettings.classes' },
-            styles: [__webpack_require__("./src/app/angular2-multiselect-dropdown/multiselect.component.scss")],
-            providers: [DROPDOWN_CONTROL_VALUE_ACCESSOR, DROPDOWN_CONTROL_VALIDATION]
-        }),
-        __metadata("design:paramtypes", [typeof (_q = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"]) === "function" && _q || Object, typeof (_r = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ChangeDetectorRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ChangeDetectorRef"]) === "function" && _r || Object])
-    ], AngularMultiSelect);
     return AngularMultiSelect;
 }());
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+    __metadata("design:type", Object)
+], AngularMultiSelect.prototype, "data", void 0);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+    __metadata("design:type", Object)
+], AngularMultiSelect.prototype, "settings", void 0);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+    __metadata("design:type", Object)
+], AngularMultiSelect.prototype, "isRearrangeable", void 0);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])('onSelect'),
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _a || Object)
+], AngularMultiSelect.prototype, "onSelect", void 0);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])('onDeSelect'),
+    __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _b || Object)
+], AngularMultiSelect.prototype, "onDeSelect", void 0);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])('onSelectAll'),
+    __metadata("design:type", typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _c || Object)
+], AngularMultiSelect.prototype, "onSelectAll", void 0);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])('onDeSelectAll'),
+    __metadata("design:type", typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _d || Object)
+], AngularMultiSelect.prototype, "onDeSelectAll", void 0);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])('onOpen'),
+    __metadata("design:type", typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _e || Object)
+], AngularMultiSelect.prototype, "onOpen", void 0);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])('onClose'),
+    __metadata("design:type", typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _f || Object)
+], AngularMultiSelect.prototype, "onClose", void 0);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])('onMoveItemUp'),
+    __metadata("design:type", typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _g || Object)
+], AngularMultiSelect.prototype, "onMoveItemUp", void 0);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])('onMoveItemDown'),
+    __metadata("design:type", typeof (_h = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _h || Object)
+], AngularMultiSelect.prototype, "onMoveItemDown", void 0);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ContentChild"])(__WEBPACK_IMPORTED_MODULE_6__menu_item__["b" /* Item */]),
+    __metadata("design:type", typeof (_j = typeof __WEBPACK_IMPORTED_MODULE_6__menu_item__["b" /* Item */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6__menu_item__["b" /* Item */]) === "function" && _j || Object)
+], AngularMultiSelect.prototype, "itemTempl", void 0);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ContentChild"])(__WEBPACK_IMPORTED_MODULE_6__menu_item__["a" /* Badge */]),
+    __metadata("design:type", typeof (_k = typeof __WEBPACK_IMPORTED_MODULE_6__menu_item__["a" /* Badge */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6__menu_item__["a" /* Badge */]) === "function" && _k || Object)
+], AngularMultiSelect.prototype, "badgeTempl", void 0);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ContentChild"])(__WEBPACK_IMPORTED_MODULE_6__menu_item__["c" /* Search */]),
+    __metadata("design:type", typeof (_l = typeof __WEBPACK_IMPORTED_MODULE_6__menu_item__["c" /* Search */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6__menu_item__["c" /* Search */]) === "function" && _l || Object)
+], AngularMultiSelect.prototype, "searchTempl", void 0);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('searchInput'),
+    __metadata("design:type", typeof (_m = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"]) === "function" && _m || Object)
+], AngularMultiSelect.prototype, "searchInput", void 0);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('selectedList'),
+    __metadata("design:type", typeof (_o = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"]) === "function" && _o || Object)
+], AngularMultiSelect.prototype, "selectedListElem", void 0);
+AngularMultiSelect = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'angular2-multiselect',
+        template: __webpack_require__("./src/app/angular2-multiselect-dropdown/multiselect.component.html"),
+        host: { '[class]': 'defaultSettings.classes' },
+        styles: [__webpack_require__("./src/app/angular2-multiselect-dropdown/multiselect.component.scss")],
+        providers: [DROPDOWN_CONTROL_VALUE_ACCESSOR, DROPDOWN_CONTROL_VALIDATION]
+    }),
+    __metadata("design:paramtypes", [typeof (_p = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"]) === "function" && _p || Object, typeof (_q = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ChangeDetectorRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ChangeDetectorRef"]) === "function" && _q || Object])
+], AngularMultiSelect);
 
-var AngularMultiSelectModule = /** @class */ (function () {
+var AngularMultiSelectModule = (function () {
     function AngularMultiSelectModule() {
     }
-    AngularMultiSelectModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
-            imports: [__WEBPACK_IMPORTED_MODULE_2__angular_common__["CommonModule"], __WEBPACK_IMPORTED_MODULE_1__angular_forms__["FormsModule"]],
-            declarations: [AngularMultiSelect, __WEBPACK_IMPORTED_MODULE_4__clickOutside__["a" /* ClickOutsideDirective */], __WEBPACK_IMPORTED_MODULE_4__clickOutside__["b" /* ScrollDirective */], __WEBPACK_IMPORTED_MODULE_4__clickOutside__["d" /* styleDirective */], __WEBPACK_IMPORTED_MODULE_5__list_filter__["a" /* ListFilterPipe */], __WEBPACK_IMPORTED_MODULE_6__menu_item__["b" /* Item */], __WEBPACK_IMPORTED_MODULE_6__menu_item__["d" /* TemplateRenderer */], __WEBPACK_IMPORTED_MODULE_6__menu_item__["a" /* Badge */], __WEBPACK_IMPORTED_MODULE_6__menu_item__["c" /* Search */], __WEBPACK_IMPORTED_MODULE_4__clickOutside__["c" /* setPosition */]],
-            exports: [AngularMultiSelect, __WEBPACK_IMPORTED_MODULE_4__clickOutside__["a" /* ClickOutsideDirective */], __WEBPACK_IMPORTED_MODULE_4__clickOutside__["b" /* ScrollDirective */], __WEBPACK_IMPORTED_MODULE_4__clickOutside__["d" /* styleDirective */], __WEBPACK_IMPORTED_MODULE_5__list_filter__["a" /* ListFilterPipe */], __WEBPACK_IMPORTED_MODULE_6__menu_item__["b" /* Item */], __WEBPACK_IMPORTED_MODULE_6__menu_item__["d" /* TemplateRenderer */], __WEBPACK_IMPORTED_MODULE_6__menu_item__["a" /* Badge */], __WEBPACK_IMPORTED_MODULE_6__menu_item__["c" /* Search */], __WEBPACK_IMPORTED_MODULE_4__clickOutside__["c" /* setPosition */]]
-        })
-    ], AngularMultiSelectModule);
     return AngularMultiSelectModule;
 }());
+AngularMultiSelectModule = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+        imports: [__WEBPACK_IMPORTED_MODULE_2__angular_common__["CommonModule"], __WEBPACK_IMPORTED_MODULE_1__angular_forms__["FormsModule"]],
+        declarations: [AngularMultiSelect, __WEBPACK_IMPORTED_MODULE_4__clickOutside__["a" /* ClickOutsideDirective */], __WEBPACK_IMPORTED_MODULE_4__clickOutside__["b" /* ScrollDirective */], __WEBPACK_IMPORTED_MODULE_4__clickOutside__["d" /* styleDirective */], __WEBPACK_IMPORTED_MODULE_5__list_filter__["a" /* ListFilterPipe */], __WEBPACK_IMPORTED_MODULE_6__menu_item__["b" /* Item */], __WEBPACK_IMPORTED_MODULE_6__menu_item__["d" /* TemplateRenderer */], __WEBPACK_IMPORTED_MODULE_6__menu_item__["a" /* Badge */], __WEBPACK_IMPORTED_MODULE_6__menu_item__["c" /* Search */], __WEBPACK_IMPORTED_MODULE_4__clickOutside__["c" /* setPosition */]],
+        exports: [AngularMultiSelect, __WEBPACK_IMPORTED_MODULE_4__clickOutside__["a" /* ClickOutsideDirective */], __WEBPACK_IMPORTED_MODULE_4__clickOutside__["b" /* ScrollDirective */], __WEBPACK_IMPORTED_MODULE_4__clickOutside__["d" /* styleDirective */], __WEBPACK_IMPORTED_MODULE_5__list_filter__["a" /* ListFilterPipe */], __WEBPACK_IMPORTED_MODULE_6__menu_item__["b" /* Item */], __WEBPACK_IMPORTED_MODULE_6__menu_item__["d" /* TemplateRenderer */], __WEBPACK_IMPORTED_MODULE_6__menu_item__["a" /* Badge */], __WEBPACK_IMPORTED_MODULE_6__menu_item__["c" /* Search */], __WEBPACK_IMPORTED_MODULE_4__clickOutside__["c" /* setPosition */]]
+    })
+], AngularMultiSelectModule);
 
+var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o, _p, _q;
 //# sourceMappingURL=/Users/jigneshchudasama/Projects/angular2-multiselect-dropdown/src/multiselect.component.js.map
 
 /***/ }),
@@ -844,7 +838,7 @@ var AngularMultiSelectModule = /** @class */ (function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyException; });
-var MyException = /** @class */ (function () {
+var MyException = (function () {
     function MyException(status, body) {
         this.status = status;
         this.body = body;
@@ -886,7 +880,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-var AppComponent = /** @class */ (function () {
+var AppComponent = (function () {
     function AppComponent() {
         this.title = 'app works!';
         this.singleSelectionList = [];
@@ -1105,16 +1099,16 @@ var AppComponent = /** @class */ (function () {
     AppComponent.prototype.changeData = function () {
         this.resetExampleSelectedItems = [];
     };
-    AppComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'app-root',
-            template: __webpack_require__("./src/app/app.component.html"),
-            styles: [__webpack_require__("./src/app/app.component.css")]
-        }),
-        __metadata("design:paramtypes", [])
-    ], AppComponent);
     return AppComponent;
 }());
+AppComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-root',
+        template: __webpack_require__("./src/app/app.component.html"),
+        styles: [__webpack_require__("./src/app/app.component.css")]
+    }),
+    __metadata("design:paramtypes", [])
+], AppComponent);
 
 //# sourceMappingURL=/Users/jigneshchudasama/Projects/angular2-multiselect-dropdown/src/app.component.js.map
 
@@ -1192,50 +1186,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var AppModule = /** @class */ (function () {
+var AppModule = (function () {
     function AppModule() {
     }
-    AppModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"])({
-            declarations: [
-                __WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* AppComponent */],
-                __WEBPACK_IMPORTED_MODULE_20__examples_gist__["a" /* ng2Gist */],
-                __WEBPACK_IMPORTED_MODULE_9__examples_basic__["a" /* BasicExample */],
-                __WEBPACK_IMPORTED_MODULE_10__examples_singleselection__["a" /* SingleSelectionExample */],
-                __WEBPACK_IMPORTED_MODULE_11__examples_groupBy__["a" /* GroupByExample */],
-                __WEBPACK_IMPORTED_MODULE_12__examples_searchFilter__["a" /* SearchFilterExample */],
-                __WEBPACK_IMPORTED_MODULE_13__examples_templating__["a" /* TemplatingExample */],
-                __WEBPACK_IMPORTED_MODULE_14__examples_resetdropdown__["a" /* ResetDropdownExample */],
-                __WEBPACK_IMPORTED_MODULE_15__examples_disablemode__["a" /* DisableModeExample */],
-                __WEBPACK_IMPORTED_MODULE_16__examples_limitselection__["a" /* LimitSelectionExample */],
-                __WEBPACK_IMPORTED_MODULE_17__examples_limitbadges__["a" /* LimitBadgesExample */],
-                __WEBPACK_IMPORTED_MODULE_18__examples_customplaceholder__["a" /* CustomPlaceholderExample */],
-                __WEBPACK_IMPORTED_MODULE_19__examples_styling__["a" /* StylingExample */],
-                __WEBPACK_IMPORTED_MODULE_22__examples_usingWithForms__["a" /* UsingWithFormExample */],
-                __WEBPACK_IMPORTED_MODULE_23__examples_usingInReactForms__["a" /* UsingWithReactiveFormExample */],
-                __WEBPACK_IMPORTED_MODULE_24__examples_lazyLoading__["a" /* LazyLoadingExample */],
-                __WEBPACK_IMPORTED_MODULE_25__examples_multipleDropdowns__["a" /* MultipleDropdownsExample */],
-                __WEBPACK_IMPORTED_MODULE_26__examples_dynamicDataSets__["a" /* DynamicDataSetsExample */],
-                __WEBPACK_IMPORTED_MODULE_27__examples_theming__["a" /* ThemingExample */],
-                __WEBPACK_IMPORTED_MODULE_28__examples_remoteData__["a" /* RemoteDataExample */],
-                __WEBPACK_IMPORTED_MODULE_29__examples_customSearch__["a" /* CustomSearchExample */]
-            ],
-            imports: [
-                __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["BrowserModule"],
-                __WEBPACK_IMPORTED_MODULE_2__angular_forms__["ReactiveFormsModule"],
-                __WEBPACK_IMPORTED_MODULE_2__angular_forms__["FormsModule"],
-                __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* HttpModule */],
-                __WEBPACK_IMPORTED_MODULE_8__app_router__["a" /* AppRouterModule */],
-                __WEBPACK_IMPORTED_MODULE_7__angular2_multiselect_dropdown_multiselect_component__["a" /* AngularMultiSelectModule */],
-                __WEBPACK_IMPORTED_MODULE_21_primeng_primeng__["TabViewModule"],
-                __WEBPACK_IMPORTED_MODULE_4__angular_common_http__["b" /* HttpClientModule */]
-            ],
-            providers: [__WEBPACK_IMPORTED_MODULE_5__examples_mock_data__["a" /* MockService */]],
-            bootstrap: [__WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* AppComponent */]]
-        })
-    ], AppModule);
     return AppModule;
 }());
+AppModule = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"])({
+        declarations: [
+            __WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* AppComponent */],
+            __WEBPACK_IMPORTED_MODULE_20__examples_gist__["a" /* ng2Gist */],
+            __WEBPACK_IMPORTED_MODULE_9__examples_basic__["a" /* BasicExample */],
+            __WEBPACK_IMPORTED_MODULE_10__examples_singleselection__["a" /* SingleSelectionExample */],
+            __WEBPACK_IMPORTED_MODULE_11__examples_groupBy__["a" /* GroupByExample */],
+            __WEBPACK_IMPORTED_MODULE_12__examples_searchFilter__["a" /* SearchFilterExample */],
+            __WEBPACK_IMPORTED_MODULE_13__examples_templating__["a" /* TemplatingExample */],
+            __WEBPACK_IMPORTED_MODULE_14__examples_resetdropdown__["a" /* ResetDropdownExample */],
+            __WEBPACK_IMPORTED_MODULE_15__examples_disablemode__["a" /* DisableModeExample */],
+            __WEBPACK_IMPORTED_MODULE_16__examples_limitselection__["a" /* LimitSelectionExample */],
+            __WEBPACK_IMPORTED_MODULE_17__examples_limitbadges__["a" /* LimitBadgesExample */],
+            __WEBPACK_IMPORTED_MODULE_18__examples_customplaceholder__["a" /* CustomPlaceholderExample */],
+            __WEBPACK_IMPORTED_MODULE_19__examples_styling__["a" /* StylingExample */],
+            __WEBPACK_IMPORTED_MODULE_22__examples_usingWithForms__["a" /* UsingWithFormExample */],
+            __WEBPACK_IMPORTED_MODULE_23__examples_usingInReactForms__["a" /* UsingWithReactiveFormExample */],
+            __WEBPACK_IMPORTED_MODULE_24__examples_lazyLoading__["a" /* LazyLoadingExample */],
+            __WEBPACK_IMPORTED_MODULE_25__examples_multipleDropdowns__["a" /* MultipleDropdownsExample */],
+            __WEBPACK_IMPORTED_MODULE_26__examples_dynamicDataSets__["a" /* DynamicDataSetsExample */],
+            __WEBPACK_IMPORTED_MODULE_27__examples_theming__["a" /* ThemingExample */],
+            __WEBPACK_IMPORTED_MODULE_28__examples_remoteData__["a" /* RemoteDataExample */],
+            __WEBPACK_IMPORTED_MODULE_29__examples_customSearch__["a" /* CustomSearchExample */]
+        ],
+        imports: [
+            __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["BrowserModule"],
+            __WEBPACK_IMPORTED_MODULE_2__angular_forms__["ReactiveFormsModule"],
+            __WEBPACK_IMPORTED_MODULE_2__angular_forms__["FormsModule"],
+            __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* HttpModule */],
+            __WEBPACK_IMPORTED_MODULE_8__app_router__["a" /* AppRouterModule */],
+            __WEBPACK_IMPORTED_MODULE_7__angular2_multiselect_dropdown_multiselect_component__["a" /* AngularMultiSelectModule */],
+            __WEBPACK_IMPORTED_MODULE_21_primeng_primeng__["TabViewModule"],
+            __WEBPACK_IMPORTED_MODULE_4__angular_common_http__["b" /* HttpClientModule */]
+        ],
+        providers: [__WEBPACK_IMPORTED_MODULE_5__examples_mock_data__["a" /* MockService */]],
+        bootstrap: [__WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* AppComponent */]]
+    })
+], AppModule);
 
 //# sourceMappingURL=/Users/jigneshchudasama/Projects/angular2-multiselect-dropdown/src/app.module.js.map
 
@@ -1316,21 +1310,21 @@ var appRoutes = [
     { path: 'remoteData', component: __WEBPACK_IMPORTED_MODULE_19__examples_remoteData__["a" /* RemoteDataExample */] },
     { path: 'customSearchAPI', component: __WEBPACK_IMPORTED_MODULE_20__examples_customSearch__["a" /* CustomSearchExample */] }
 ];
-var AppRouterModule = /** @class */ (function () {
+var AppRouterModule = (function () {
     function AppRouterModule() {
     }
-    AppRouterModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"])({
-            imports: [
-                __WEBPACK_IMPORTED_MODULE_0__angular_router__["RouterModule"].forRoot(appRoutes, { useHash: true })
-            ],
-            exports: [
-                __WEBPACK_IMPORTED_MODULE_0__angular_router__["RouterModule"]
-            ]
-        })
-    ], AppRouterModule);
     return AppRouterModule;
 }());
+AppRouterModule = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"])({
+        imports: [
+            __WEBPACK_IMPORTED_MODULE_0__angular_router__["RouterModule"].forRoot(appRoutes, { useHash: true })
+        ],
+        exports: [
+            __WEBPACK_IMPORTED_MODULE_0__angular_router__["RouterModule"]
+        ]
+    })
+], AppRouterModule);
 
 //# sourceMappingURL=/Users/jigneshchudasama/Projects/angular2-multiselect-dropdown/src/app.router.js.map
 
@@ -1352,7 +1346,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-var BasicExample = /** @class */ (function () {
+var BasicExample = (function () {
     function BasicExample() {
         this.itemList = [];
         this.selectedItems = [];
@@ -1407,14 +1401,14 @@ var BasicExample = /** @class */ (function () {
     BasicExample.prototype.onMoveDown = function (items) {
         console.log('onMoveDown', items);
     };
-    BasicExample = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            template: __webpack_require__("./src/app/examples/views/view.html")
-        }),
-        __metadata("design:paramtypes", [])
-    ], BasicExample);
     return BasicExample;
 }());
+BasicExample = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        template: __webpack_require__("./src/app/examples/views/view.html")
+    }),
+    __metadata("design:paramtypes", [])
+], BasicExample);
 
 //# sourceMappingURL=/Users/jigneshchudasama/Projects/angular2-multiselect-dropdown/src/basic.js.map
 
@@ -1438,7 +1432,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-var CustomSearchExample = /** @class */ (function () {
+var CustomSearchExample = (function () {
     function CustomSearchExample(http) {
         this.http = http;
         this.itemList = [];
@@ -1489,16 +1483,16 @@ var CustomSearchExample = /** @class */ (function () {
         }, function (error) {
         });
     };
-    var _a;
-    CustomSearchExample = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            template: __webpack_require__("./src/app/examples/views/customSearch.html")
-        }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]) === "function" && _a || Object])
-    ], CustomSearchExample);
     return CustomSearchExample;
 }());
+CustomSearchExample = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        template: __webpack_require__("./src/app/examples/views/customSearch.html")
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]) === "function" && _a || Object])
+], CustomSearchExample);
 
+var _a;
 //# sourceMappingURL=/Users/jigneshchudasama/Projects/angular2-multiselect-dropdown/src/customSearch.js.map
 
 /***/ }),
@@ -1519,7 +1513,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-var CustomPlaceholderExample = /** @class */ (function () {
+var CustomPlaceholderExample = (function () {
     function CustomPlaceholderExample() {
         this.itemList = [];
         this.selectedItems = [];
@@ -1569,14 +1563,14 @@ var CustomPlaceholderExample = /** @class */ (function () {
     CustomPlaceholderExample.prototype.onDeSelectAll = function (items) {
         console.log(items);
     };
-    CustomPlaceholderExample = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            template: __webpack_require__("./src/app/examples/views/view.html")
-        }),
-        __metadata("design:paramtypes", [])
-    ], CustomPlaceholderExample);
     return CustomPlaceholderExample;
 }());
+CustomPlaceholderExample = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        template: __webpack_require__("./src/app/examples/views/view.html")
+    }),
+    __metadata("design:paramtypes", [])
+], CustomPlaceholderExample);
 
 //# sourceMappingURL=/Users/jigneshchudasama/Projects/angular2-multiselect-dropdown/src/customplaceholder.js.map
 
@@ -1598,7 +1592,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-var DisableModeExample = /** @class */ (function () {
+var DisableModeExample = (function () {
     function DisableModeExample() {
         this.itemList = [];
         this.selectedItems = [];
@@ -1686,14 +1680,14 @@ var DisableModeExample = /** @class */ (function () {
             disabled: false
         };
     };
-    DisableModeExample = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            template: __webpack_require__("./src/app/examples/views/disableMode.html")
-        }),
-        __metadata("design:paramtypes", [])
-    ], DisableModeExample);
     return DisableModeExample;
 }());
+DisableModeExample = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        template: __webpack_require__("./src/app/examples/views/disableMode.html")
+    }),
+    __metadata("design:paramtypes", [])
+], DisableModeExample);
 
 //# sourceMappingURL=/Users/jigneshchudasama/Projects/angular2-multiselect-dropdown/src/disablemode.js.map
 
@@ -1717,7 +1711,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-var DynamicDataSetsExample = /** @class */ (function () {
+var DynamicDataSetsExample = (function () {
     function DynamicDataSetsExample(mockService) {
         this.mockService = mockService;
         this.itemList = [];
@@ -1783,16 +1777,16 @@ var DynamicDataSetsExample = /** @class */ (function () {
             this.itemList.push(tempArr[i]);
         }
     };
-    var _a;
-    DynamicDataSetsExample = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            template: __webpack_require__("./src/app/examples/views/dynamicData.html")
-        }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__mock_data__["a" /* MockService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__mock_data__["a" /* MockService */]) === "function" && _a || Object])
-    ], DynamicDataSetsExample);
     return DynamicDataSetsExample;
 }());
+DynamicDataSetsExample = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        template: __webpack_require__("./src/app/examples/views/dynamicData.html")
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__mock_data__["a" /* MockService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__mock_data__["a" /* MockService */]) === "function" && _a || Object])
+], DynamicDataSetsExample);
 
+var _a;
 //# sourceMappingURL=/Users/jigneshchudasama/Projects/angular2-multiselect-dropdown/src/dynamicDataSets.js.map
 
 /***/ }),
@@ -1813,7 +1807,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-var ng2Gist = /** @class */ (function () {
+var ng2Gist = (function () {
     function ng2Gist() {
     }
     ng2Gist.prototype.ngAfterViewInit = function () {
@@ -1824,26 +1818,26 @@ var ng2Gist = /** @class */ (function () {
         doc.write(content);
         doc.close();
     };
-    var _a;
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('iframe'),
-        __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"]) === "function" && _a || Object)
-    ], ng2Gist.prototype, "iframe", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
-        __metadata("design:type", Object)
-    ], ng2Gist.prototype, "gistId", void 0);
-    ng2Gist = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'ng2-gist',
-            template: "\n    <iframe #iframe type=\"text/javascript\" width=\"100%\" frameborder=\"0\"></iframe>\n  ",
-            styleUrls: []
-        }),
-        __metadata("design:paramtypes", [])
-    ], ng2Gist);
     return ng2Gist;
 }());
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('iframe'),
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"]) === "function" && _a || Object)
+], ng2Gist.prototype, "iframe", void 0);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+    __metadata("design:type", Object)
+], ng2Gist.prototype, "gistId", void 0);
+ng2Gist = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'ng2-gist',
+        template: "\n    <iframe #iframe type=\"text/javascript\" width=\"100%\" frameborder=\"0\"></iframe>\n  ",
+        styleUrls: []
+    }),
+    __metadata("design:paramtypes", [])
+], ng2Gist);
 
+var _a;
 //# sourceMappingURL=/Users/jigneshchudasama/Projects/angular2-multiselect-dropdown/src/gist.js.map
 
 /***/ }),
@@ -1864,7 +1858,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-var GroupByExample = /** @class */ (function () {
+var GroupByExample = (function () {
     function GroupByExample() {
         this.itemList = [];
         this.selectedItems = [];
@@ -1933,14 +1927,14 @@ var GroupByExample = /** @class */ (function () {
             { "id": 6, "itemName": "Sweden", "category": "Europe" }
         ];
     };
-    GroupByExample = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            template: __webpack_require__("./src/app/examples/views/groupBy.html")
-        }),
-        __metadata("design:paramtypes", [])
-    ], GroupByExample);
     return GroupByExample;
 }());
+GroupByExample = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        template: __webpack_require__("./src/app/examples/views/groupBy.html")
+    }),
+    __metadata("design:paramtypes", [])
+], GroupByExample);
 
 //# sourceMappingURL=/Users/jigneshchudasama/Projects/angular2-multiselect-dropdown/src/groupBy.js.map
 
@@ -1962,7 +1956,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-var LazyLoadingExample = /** @class */ (function () {
+var LazyLoadingExample = (function () {
     function LazyLoadingExample() {
         this.itemList = [];
         this.selectedItems = [];
@@ -2011,14 +2005,14 @@ var LazyLoadingExample = /** @class */ (function () {
     LazyLoadingExample.prototype.changeData = function () {
         this.selectedItems = [];
     };
-    LazyLoadingExample = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            template: __webpack_require__("./src/app/examples/views/lazyLoading.html")
-        }),
-        __metadata("design:paramtypes", [])
-    ], LazyLoadingExample);
     return LazyLoadingExample;
 }());
+LazyLoadingExample = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        template: __webpack_require__("./src/app/examples/views/lazyLoading.html")
+    }),
+    __metadata("design:paramtypes", [])
+], LazyLoadingExample);
 
 //# sourceMappingURL=/Users/jigneshchudasama/Projects/angular2-multiselect-dropdown/src/lazyLoading.js.map
 
@@ -2040,7 +2034,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-var LimitBadgesExample = /** @class */ (function () {
+var LimitBadgesExample = (function () {
     function LimitBadgesExample() {
         this.itemList = [];
         this.selectedItems = [];
@@ -2090,14 +2084,14 @@ var LimitBadgesExample = /** @class */ (function () {
     LimitBadgesExample.prototype.onDeSelectAll = function (items) {
         console.log(items);
     };
-    LimitBadgesExample = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            template: __webpack_require__("./src/app/examples/views/view.html")
-        }),
-        __metadata("design:paramtypes", [])
-    ], LimitBadgesExample);
     return LimitBadgesExample;
 }());
+LimitBadgesExample = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        template: __webpack_require__("./src/app/examples/views/view.html")
+    }),
+    __metadata("design:paramtypes", [])
+], LimitBadgesExample);
 
 //# sourceMappingURL=/Users/jigneshchudasama/Projects/angular2-multiselect-dropdown/src/limitbadges.js.map
 
@@ -2119,7 +2113,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-var LimitSelectionExample = /** @class */ (function () {
+var LimitSelectionExample = (function () {
     function LimitSelectionExample() {
         this.itemList = [];
         this.selectedItems = [];
@@ -2169,14 +2163,14 @@ var LimitSelectionExample = /** @class */ (function () {
     LimitSelectionExample.prototype.onDeSelectAll = function (items) {
         console.log(items);
     };
-    LimitSelectionExample = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            template: __webpack_require__("./src/app/examples/views/view.html")
-        }),
-        __metadata("design:paramtypes", [])
-    ], LimitSelectionExample);
     return LimitSelectionExample;
 }());
+LimitSelectionExample = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        template: __webpack_require__("./src/app/examples/views/view.html")
+    }),
+    __metadata("design:paramtypes", [])
+], LimitSelectionExample);
 
 //# sourceMappingURL=/Users/jigneshchudasama/Projects/angular2-multiselect-dropdown/src/limitselection.js.map
 
@@ -2200,7 +2194,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-var MockService = /** @class */ (function () {
+var MockService = (function () {
     function MockService() {
         this.DATA = [{ "id": "PBMMedAdhr", "name": "PBM Medication Adherence" }, { "id": "GapsInCare", "name": "Gaps In Care" }, { "id": "UCTest1", "name": "Use Case Test1" }, { "id": "BASICSAVE", "name": "A generic alternative or 30-90 day dispense opport" }, { "id": "ADVSAVE", "name": "An advnaced generic alternative or 30-90 day dispe" }, { "id": "AttAlert", "name": "Attachment Alert" }, { "id": "PatSave", "name": "Patient savings" }, { "id": "UCTest2", "name": "Use Case Test 2" }, { "id": "UCTest3", "name": "Use Case Test 3" }, { "id": "UCTest4", "name": "Use Case Test 4" }, { "id": "UCTest5", "name": "Use Case Test 5" }, { "id": "UCTest6", "name": "Use Case Test 6" }, { "id": "UCTest7", "name": "Use Case Test 7" }, { "id": "UCTest9", "name": "Use Case Test 9" }, { "id": "UCTest#Ten", "name": "Use Case Test 10" }, { "id": "UCTest8", "name": "Use Case Test 8" }, { "id": "UCTest11", "name": "Test Use Case 11" }, { "id": "UCTest12", "name": "Test Use Case 12" }, { "id": "UCTest13", "name": "Test Use Case 13" }, { "id": "PNLIMMUN", "name": "PNL Immunization" }, { "id": "TrustBrkr", "name": "Identity Services" }, { "id": "RTBC", "name": "real time benefit check for 90 day at retail" }];
     }
@@ -2253,12 +2247,12 @@ var MockService = /** @class */ (function () {
             { "id": 6, "itemName": "Sweden", "category": "Europe" }
         ];
     };
-    MockService = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
-        __metadata("design:paramtypes", [])
-    ], MockService);
     return MockService;
 }());
+MockService = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
+    __metadata("design:paramtypes", [])
+], MockService);
 
 //# sourceMappingURL=/Users/jigneshchudasama/Projects/angular2-multiselect-dropdown/src/mock-data.js.map
 
@@ -2284,7 +2278,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var MultipleDropdownsExample = /** @class */ (function () {
+var MultipleDropdownsExample = (function () {
     function MultipleDropdownsExample(mockService) {
         this.mockService = mockService;
         this.itemList = [];
@@ -2340,16 +2334,16 @@ var MultipleDropdownsExample = /** @class */ (function () {
     MultipleDropdownsExample.prototype.onDeSelectAll = function (items) {
         console.log(items);
     };
-    var _a;
-    MultipleDropdownsExample = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            template: __webpack_require__("./src/app/examples/views/multipledropdowns.html")
-        }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__mock_data__["a" /* MockService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__mock_data__["a" /* MockService */]) === "function" && _a || Object])
-    ], MultipleDropdownsExample);
     return MultipleDropdownsExample;
 }());
+MultipleDropdownsExample = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        template: __webpack_require__("./src/app/examples/views/multipledropdowns.html")
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__mock_data__["a" /* MockService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__mock_data__["a" /* MockService */]) === "function" && _a || Object])
+], MultipleDropdownsExample);
 
+var _a;
 //# sourceMappingURL=/Users/jigneshchudasama/Projects/angular2-multiselect-dropdown/src/multipleDropdowns.js.map
 
 /***/ }),
@@ -2372,7 +2366,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-var RemoteDataExample = /** @class */ (function () {
+var RemoteDataExample = (function () {
     function RemoteDataExample(http) {
         this.http = http;
         this.itemList = [];
@@ -2421,16 +2415,16 @@ var RemoteDataExample = /** @class */ (function () {
     RemoteDataExample.prototype.onSearch = function (evt) {
         console.log(evt.target.value);
     };
-    var _a;
-    RemoteDataExample = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            template: __webpack_require__("./src/app/examples/views/remoteData.html")
-        }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]) === "function" && _a || Object])
-    ], RemoteDataExample);
     return RemoteDataExample;
 }());
+RemoteDataExample = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        template: __webpack_require__("./src/app/examples/views/remoteData.html")
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]) === "function" && _a || Object])
+], RemoteDataExample);
 
+var _a;
 //# sourceMappingURL=/Users/jigneshchudasama/Projects/angular2-multiselect-dropdown/src/remoteData.js.map
 
 /***/ }),
@@ -2451,7 +2445,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-var ResetDropdownExample = /** @class */ (function () {
+var ResetDropdownExample = (function () {
     function ResetDropdownExample() {
         this.itemList = [];
         this.selectedItems = [];
@@ -2505,14 +2499,14 @@ var ResetDropdownExample = /** @class */ (function () {
     ResetDropdownExample.prototype.changeData = function () {
         this.selectedItems = [];
     };
-    ResetDropdownExample = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            template: __webpack_require__("./src/app/examples/views/resetDropdown.html")
-        }),
-        __metadata("design:paramtypes", [])
-    ], ResetDropdownExample);
     return ResetDropdownExample;
 }());
+ResetDropdownExample = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        template: __webpack_require__("./src/app/examples/views/resetDropdown.html")
+    }),
+    __metadata("design:paramtypes", [])
+], ResetDropdownExample);
 
 //# sourceMappingURL=/Users/jigneshchudasama/Projects/angular2-multiselect-dropdown/src/resetdropdown.js.map
 
@@ -2534,7 +2528,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-var SearchFilterExample = /** @class */ (function () {
+var SearchFilterExample = (function () {
     function SearchFilterExample() {
         this.itemList = [];
         this.selectedItems = [];
@@ -2584,14 +2578,14 @@ var SearchFilterExample = /** @class */ (function () {
     SearchFilterExample.prototype.onDeSelectAll = function (items) {
         console.log(items);
     };
-    SearchFilterExample = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            template: __webpack_require__("./src/app/examples/views/view.html")
-        }),
-        __metadata("design:paramtypes", [])
-    ], SearchFilterExample);
     return SearchFilterExample;
 }());
+SearchFilterExample = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        template: __webpack_require__("./src/app/examples/views/view.html")
+    }),
+    __metadata("design:paramtypes", [])
+], SearchFilterExample);
 
 //# sourceMappingURL=/Users/jigneshchudasama/Projects/angular2-multiselect-dropdown/src/searchFilter.js.map
 
@@ -2613,7 +2607,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-var SingleSelectionExample = /** @class */ (function () {
+var SingleSelectionExample = (function () {
     function SingleSelectionExample() {
         this.itemList = [];
         this.selectedItems = [];
@@ -2653,14 +2647,14 @@ var SingleSelectionExample = /** @class */ (function () {
     SingleSelectionExample.prototype.onDeSelectAll = function (items) {
         console.log(items);
     };
-    SingleSelectionExample = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            template: __webpack_require__("./src/app/examples/views/view.html")
-        }),
-        __metadata("design:paramtypes", [])
-    ], SingleSelectionExample);
     return SingleSelectionExample;
 }());
+SingleSelectionExample = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        template: __webpack_require__("./src/app/examples/views/view.html")
+    }),
+    __metadata("design:paramtypes", [])
+], SingleSelectionExample);
 
 //# sourceMappingURL=/Users/jigneshchudasama/Projects/angular2-multiselect-dropdown/src/singleselection.js.map
 
@@ -2682,7 +2676,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-var StylingExample = /** @class */ (function () {
+var StylingExample = (function () {
     function StylingExample() {
         this.itemList = [];
         this.selectedItems = [];
@@ -2731,14 +2725,14 @@ var StylingExample = /** @class */ (function () {
     StylingExample.prototype.onDeSelectAll = function (items) {
         console.log(items);
     };
-    StylingExample = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            template: __webpack_require__("./src/app/examples/views/view.html")
-        }),
-        __metadata("design:paramtypes", [])
-    ], StylingExample);
     return StylingExample;
 }());
+StylingExample = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        template: __webpack_require__("./src/app/examples/views/view.html")
+    }),
+    __metadata("design:paramtypes", [])
+], StylingExample);
 
 //# sourceMappingURL=/Users/jigneshchudasama/Projects/angular2-multiselect-dropdown/src/styling.js.map
 
@@ -2760,7 +2754,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-var TemplatingExample = /** @class */ (function () {
+var TemplatingExample = (function () {
     function TemplatingExample() {
         this.itemList = [];
         this.selectedItems = [];
@@ -2810,14 +2804,14 @@ var TemplatingExample = /** @class */ (function () {
     TemplatingExample.prototype.onDeSelectAll = function (items) {
         console.log(items);
     };
-    TemplatingExample = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            template: __webpack_require__("./src/app/examples/views/templating.html")
-        }),
-        __metadata("design:paramtypes", [])
-    ], TemplatingExample);
     return TemplatingExample;
 }());
+TemplatingExample = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        template: __webpack_require__("./src/app/examples/views/templating.html")
+    }),
+    __metadata("design:paramtypes", [])
+], TemplatingExample);
 
 //# sourceMappingURL=/Users/jigneshchudasama/Projects/angular2-multiselect-dropdown/src/templating.js.map
 
@@ -2839,7 +2833,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-var ThemingExample = /** @class */ (function () {
+var ThemingExample = (function () {
     function ThemingExample() {
         this.itemList = [];
         this.selectedItems = [];
@@ -2888,14 +2882,14 @@ var ThemingExample = /** @class */ (function () {
     ThemingExample.prototype.onDeSelectAll = function (items) {
         console.log(items);
     };
-    ThemingExample = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            template: __webpack_require__("./src/app/examples/views/theming.html")
-        }),
-        __metadata("design:paramtypes", [])
-    ], ThemingExample);
     return ThemingExample;
 }());
+ThemingExample = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        template: __webpack_require__("./src/app/examples/views/theming.html")
+    }),
+    __metadata("design:paramtypes", [])
+], ThemingExample);
 
 //# sourceMappingURL=/Users/jigneshchudasama/Projects/angular2-multiselect-dropdown/src/theming.js.map
 
@@ -2919,7 +2913,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-var UsingWithReactiveFormExample = /** @class */ (function () {
+var UsingWithReactiveFormExample = (function () {
     function UsingWithReactiveFormExample(fb) {
         this.fb = fb;
         this.itemList = [];
@@ -2974,16 +2968,16 @@ var UsingWithReactiveFormExample = /** @class */ (function () {
     UsingWithReactiveFormExample.prototype.onDeSelectAll = function (items) {
         console.log(items);
     };
-    var _a;
-    UsingWithReactiveFormExample = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            template: __webpack_require__("./src/app/examples/views/using-in-react-form.html")
-        }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_forms__["FormBuilder"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_forms__["FormBuilder"]) === "function" && _a || Object])
-    ], UsingWithReactiveFormExample);
     return UsingWithReactiveFormExample;
 }());
+UsingWithReactiveFormExample = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        template: __webpack_require__("./src/app/examples/views/using-in-react-form.html")
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_forms__["FormBuilder"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_forms__["FormBuilder"]) === "function" && _a || Object])
+], UsingWithReactiveFormExample);
 
+var _a;
 //# sourceMappingURL=/Users/jigneshchudasama/Projects/angular2-multiselect-dropdown/src/usingInReactForms.js.map
 
 /***/ }),
@@ -3004,7 +2998,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-var UsingWithFormExample = /** @class */ (function () {
+var UsingWithFormExample = (function () {
     function UsingWithFormExample() {
         this.itemList = [];
         this.selectedItems = [];
@@ -3053,14 +3047,14 @@ var UsingWithFormExample = /** @class */ (function () {
     UsingWithFormExample.prototype.onDeSelectAll = function (items) {
         console.log(items);
     };
-    UsingWithFormExample = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            template: __webpack_require__("./src/app/examples/views/using-in-form.html")
-        }),
-        __metadata("design:paramtypes", [])
-    ], UsingWithFormExample);
     return UsingWithFormExample;
 }());
+UsingWithFormExample = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        template: __webpack_require__("./src/app/examples/views/using-in-form.html")
+    }),
+    __metadata("design:paramtypes", [])
+], UsingWithFormExample);
 
 //# sourceMappingURL=/Users/jigneshchudasama/Projects/angular2-multiselect-dropdown/src/usingWithForms.js.map
 
@@ -3166,6 +3160,7 @@ module.exports = "<h2 class=\"example-title\">{{title}}</h2>\n<div class=\"col-m
 // The build system defaults to the dev environment which uses `environment.ts`, but if you do
 // `ng build --env=prod` then `environment.prod.ts` will be used instead.
 // The list of which env maps to which file can be found in `.angular-cli.json`.
+// The file contents for the current environment will overwrite these during build.
 var environment = {
     production: false
 };
