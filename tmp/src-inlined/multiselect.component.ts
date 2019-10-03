@@ -316,8 +316,6 @@ export class AngularMultiSelect implements OnInit, ControlValueAccessor, OnChang
     }
     ngOnInit() {
         this.settings = Object.assign(this.defaultSettings, this.settings);
-        console.log('this.data', this.data);
-        this.data[0].disabled = true;
         if (this.settings.groupBy) {
             this.groupedData = this.transformData(this.data, this.settings.groupBy);
         }
