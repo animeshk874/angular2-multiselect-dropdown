@@ -134,7 +134,7 @@ const noop = () => {
                       <span *ngIf="itemTempl">
                           <li *ngFor="let item of data | listFilter: filter : settings.searchBy; let i = index;" (click)="onItemClick(item,i,$event)"
                               class="pure-checkbox">
-                              <input *ngIf="settings.showCheckbox" type="checkbox" [checked]="isSelected(item)" [disabled]="settings.limitSelection == selectedItems?.length && !isSelected(item)"
+                              <input *ngIf="settings.showCheckbox" type="checkbox" [checked]="isSelected(item)" [disabled]="(settings.limitSelection == selectedItems?.length && !isSelected(item)) || item.disabled"
                               />
                               <label></label>
                               <c-templateRenderer [data]="itemTempl" [item]="item"></c-templateRenderer>
@@ -144,7 +144,7 @@ const noop = () => {
                           <li *ngFor="let item of data | listFilter:filter : settings.searchBy; let i = index;" class="pure-checkbox">
                               <div class="clearfix">
                                   <div class="pull-left" (click)="onItemClick(item,i,$event)">
-                                      <input *ngIf="settings.showCheckbox" type="checkbox" [checked]="isSelected(item)" [disabled]="settings.limitSelection == selectedItems?.length && !isSelected(item)"
+                                      <input *ngIf="settings.showCheckbox" type="checkbox" [checked]="isSelected(item)" [disabled]="(settings.limitSelection == selectedItems?.length && !isSelected(item)) || item.disabled"
                                       />
                                       <label>{{item[settings.labelKey]}}</label>
                                   </div>
@@ -163,7 +163,7 @@ const noop = () => {
                                   class="pure-checkbox" [styleProp]="chunkIndex[i]">
                                   <div class="clearfix">
                                       <div class="pull-left" (click)="onItemClick(item,i,$event)">
-                                          <input *ngIf="settings.showCheckbox" type="checkbox" [checked]="isSelected(item)" [disabled]="settings.limitSelection == selectedItems?.length && !isSelected(item)"
+                                          <input *ngIf="settings.showCheckbox" type="checkbox" [checked]="isSelected(item)" [disabled]="(settings.limitSelection == selectedItems?.length && !isSelected(item)) || item.disabled"
                                           />
                                           <label>{{item[settings.labelKey]}}</label>
                                       </div>
@@ -185,7 +185,7 @@ const noop = () => {
                           <span *ngIf="itemTempl">
                               <li *ngFor="let item of obj.value | listFilter:filter : settings.searchBy; let i = index;" (click)="onItemClick(item,i,$event)"
                                   class="pure-checkbox">
-                                  <input *ngIf="settings.showCheckbox" type="checkbox" [checked]="isSelected(item)" [disabled]="settings.limitSelection == selectedItems?.length && !isSelected(item)"
+                                  <input *ngIf="settings.showCheckbox" type="checkbox" [checked]="isSelected(item)" [disabled]="(settings.limitSelection == selectedItems?.length && !isSelected(item)) || item.disabled"
                                   />
                                   <label></label>
                                   <c-templateRenderer [data]="itemTempl" [item]="item"></c-templateRenderer>
@@ -195,7 +195,7 @@ const noop = () => {
                               <li *ngFor="let item of obj.value | listFilter:filter : settings.searchBy; let i = index;" class="pure-checkbox">
                                   <div class="clearfix">
                                       <div class="pull-left" (click)="onItemClick(item,i,$event)">
-                                          <input *ngIf="settings.showCheckbox" type="checkbox" [checked]="isSelected(item)" [disabled]="settings.limitSelection == selectedItems?.length && !isSelected(item)"
+                                          <input *ngIf="settings.showCheckbox" type="checkbox" [checked]="isSelected(item)" [disabled]="(settings.limitSelection == selectedItems?.length && !isSelected(item)) || item.disabled"
                                           />
                                           <label>{{item[settings.labelKey]}}</label>
                                       </div>
@@ -316,6 +316,8 @@ export class AngularMultiSelect implements OnInit, ControlValueAccessor, OnChang
     }
     ngOnInit() {
         this.settings = Object.assign(this.defaultSettings, this.settings);
+        console.log('this.data', this.data);
+        this.data[0].disabled = true;
         if (this.settings.groupBy) {
             this.groupedData = this.transformData(this.data, this.settings.groupBy);
         }
@@ -368,6 +370,10 @@ export class AngularMultiSelect implements OnInit, ControlValueAccessor, OnChang
     }
     onItemClick(item: any, index: number, evt: Event) {
         if (this.settings.disabled) {
+            return false;
+        }
+
+        if (item.disabled) {
             return false;
         }
 
@@ -481,6 +487,9 @@ export class AngularMultiSelect implements OnInit, ControlValueAccessor, OnChang
         return item[this.settings.primaryKey];
     }
     isSelected(clickedItem: any) {
+        if (clickedItem.disabled) {
+            return;
+        }
         let found = false;
         this.selectedItems && this.selectedItems.forEach(item => {
             if (clickedItem[this.settings.primaryKey] === item[this.settings.primaryKey]) {
@@ -561,7 +570,8 @@ export class AngularMultiSelect implements OnInit, ControlValueAccessor, OnChang
     toggleSelectAll() {
         if (!this.isSelectAll) {
             this.selectedItems = [];
-            this.selectedItems = this.data.slice();
+            // this.selectedItems = this.data.slice();
+            this.selectedItems = this.data.filter((individualData) => !individualData.disabled);
             this.isSelectAll = true;
             this.onChangeCallback(this.selectedItems);
             this.onTouchedCallback(this.selectedItems);

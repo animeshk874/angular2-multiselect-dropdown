@@ -108,7 +108,7 @@
                 <span *ngIf="itemTempl">
                     <li *ngFor="let item of data | listFilter: filter : settings.searchBy; let i = index;" (click)="onItemClick(item,i,$event)"
                         class="pure-checkbox">
-                        <input *ngIf="settings.showCheckbox" type="checkbox" [checked]="isSelected(item)" [disabled]="settings.limitSelection == selectedItems?.length && !isSelected(item)"
+                        <input *ngIf="settings.showCheckbox" type="checkbox" [checked]="isSelected(item)" [disabled]="(settings.limitSelection == selectedItems?.length && !isSelected(item)) || item.disabled"
                         />
                         <label></label>
                         <c-templateRenderer [data]="itemTempl" [item]="item"></c-templateRenderer>
@@ -118,7 +118,7 @@
                     <li *ngFor="let item of data | listFilter:filter : settings.searchBy; let i = index;" class="pure-checkbox">
                         <div class="clearfix">
                             <div class="pull-left" (click)="onItemClick(item,i,$event)">
-                                <input *ngIf="settings.showCheckbox" type="checkbox" [checked]="isSelected(item)" [disabled]="settings.limitSelection == selectedItems?.length && !isSelected(item)"
+                                <input *ngIf="settings.showCheckbox" type="checkbox" [checked]="isSelected(item)" [disabled]="(settings.limitSelection == selectedItems?.length && !isSelected(item)) || item.disabled"
                                 />
                                 <label>{{item[settings.labelKey]}}</label>
                             </div>
@@ -137,7 +137,7 @@
                             class="pure-checkbox" [styleProp]="chunkIndex[i]">
                             <div class="clearfix">
                                 <div class="pull-left" (click)="onItemClick(item,i,$event)">
-                                    <input *ngIf="settings.showCheckbox" type="checkbox" [checked]="isSelected(item)" [disabled]="settings.limitSelection == selectedItems?.length && !isSelected(item)"
+                                    <input *ngIf="settings.showCheckbox" type="checkbox" [checked]="isSelected(item)" [disabled]="(settings.limitSelection == selectedItems?.length && !isSelected(item)) || item.disabled"
                                     />
                                     <label>{{item[settings.labelKey]}}</label>
                                 </div>
@@ -159,7 +159,7 @@
                     <span *ngIf="itemTempl">
                         <li *ngFor="let item of obj.value | listFilter:filter : settings.searchBy; let i = index;" (click)="onItemClick(item,i,$event)"
                             class="pure-checkbox">
-                            <input *ngIf="settings.showCheckbox" type="checkbox" [checked]="isSelected(item)" [disabled]="settings.limitSelection == selectedItems?.length && !isSelected(item)"
+                            <input *ngIf="settings.showCheckbox" type="checkbox" [checked]="isSelected(item)" [disabled]="(settings.limitSelection == selectedItems?.length && !isSelected(item)) || item.disabled"
                             />
                             <label></label>
                             <c-templateRenderer [data]="itemTempl" [item]="item"></c-templateRenderer>
@@ -169,7 +169,7 @@
                         <li *ngFor="let item of obj.value | listFilter:filter : settings.searchBy; let i = index;" class="pure-checkbox">
                             <div class="clearfix">
                                 <div class="pull-left" (click)="onItemClick(item,i,$event)">
-                                    <input *ngIf="settings.showCheckbox" type="checkbox" [checked]="isSelected(item)" [disabled]="settings.limitSelection == selectedItems?.length && !isSelected(item)"
+                                    <input *ngIf="settings.showCheckbox" type="checkbox" [checked]="isSelected(item)" [disabled]="(settings.limitSelection == selectedItems?.length && !isSelected(item)) || item.disabled"
                                     />
                                     <label>{{item[settings.labelKey]}}</label>
                                 </div>
