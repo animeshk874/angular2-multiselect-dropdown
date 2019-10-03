@@ -122,6 +122,8 @@ export class AngularMultiSelect implements OnInit, ControlValueAccessor, OnChang
     }
     ngOnInit() {
         this.settings = Object.assign(this.defaultSettings, this.settings);
+        console.log('this.data', this.data);
+        this.data[0].disabled = true;
         if (this.settings.groupBy) {
             this.groupedData = this.transformData(this.data, this.settings.groupBy);
         }
@@ -174,6 +176,10 @@ export class AngularMultiSelect implements OnInit, ControlValueAccessor, OnChang
     }
     onItemClick(item: any, index: number, evt: Event) {
         if (this.settings.disabled) {
+            return false;
+        }
+
+        if (item.disabled) {
             return false;
         }
 
@@ -287,6 +293,9 @@ export class AngularMultiSelect implements OnInit, ControlValueAccessor, OnChang
         return item[this.settings.primaryKey];
     }
     isSelected(clickedItem: any) {
+        if (clickedItem.disabled) {
+            return;
+        }
         let found = false;
         this.selectedItems && this.selectedItems.forEach(item => {
             if (clickedItem[this.settings.primaryKey] === item[this.settings.primaryKey]) {
