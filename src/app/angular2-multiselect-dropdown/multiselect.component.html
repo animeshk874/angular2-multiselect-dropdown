@@ -185,7 +185,7 @@
                     </span>
                 </ul>
             </div>
-            <h5 class="list-message" *ngIf="data?.length == 0">{{settings.noDataLabel}}</h5>
+            <h5 class="list-message" *ngIf="(data?.length == 0) || (item of data | listFilter: filter : settings.searchBy)?.length === 0">{{settings.noDataLabel}}</h5>
         </div>
     </div>
 </div>
