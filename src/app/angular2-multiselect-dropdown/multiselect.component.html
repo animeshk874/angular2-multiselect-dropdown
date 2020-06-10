@@ -120,7 +120,7 @@
                             <div class="pull-left" (click)="onItemClick(item,i,$event)">
                                 <input *ngIf="settings.showCheckbox" type="checkbox" [checked]="isSelected(item)" [disabled]="(settings.limitSelection == selectedItems?.length && !isSelected(item)) || item.disabled"
                                 />
-                                <label>{{item[settings.labelKey]}}</label>
+                                <label>{{item[settings.labelKey] + '----' + 'This is added'}}</label>
                             </div>
                             <div class="pull-right" *ngIf="isSelected(item) && isRearrangeable">
                                 <span class="disabled fa fa-chevron-up" *ngIf="i === 0"></span>
